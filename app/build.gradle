@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.t_frag"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
@@ -34,7 +34,7 @@ dependencies {
 
     // Java language implementation
     implementation "androidx.fragment:fragment:$fragment_version"
-
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.24'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
