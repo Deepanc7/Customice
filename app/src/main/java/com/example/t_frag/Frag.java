@@ -32,9 +32,9 @@ public class Frag extends AppCompatActivity {
         new TabLayoutMediator(tabLayout, viewPager, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                if (position==0) tab.setText("Frag 1");
-                if (position==1) tab.setText("Frag 2");
-                if (position==2) tab.setText("Frag 3");
+                if (position==0) tab.setText("Type");
+                if (position==1) tab.setText("Flavour");
+                if (position==2) tab.setText("Toppings");
             }
         }).attach();
 

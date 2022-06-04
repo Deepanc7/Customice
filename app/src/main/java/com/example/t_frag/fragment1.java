@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,39 +25,23 @@ public class fragment1 extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ImageButton simpleImageButtonCup = (ImageButton)view.findViewById(R.id.imageButton2);
-        ImageButton simpleImageButtonCone = (ImageButton)view.findViewById(R.id.imageButton3);
-        ImageButton simpleImageButtonCandy = (ImageButton)view.findViewById(R.id.imageButton);
-        ImageButton simpleImageButtonParfait = (ImageButton)view.findViewById(R.id.imageButton4);
+        ImageButton simpleImageButtonCup = (ImageButton)view.findViewById(R.id.cup_button);
+        ImageButton simpleImageButtonCandy = (ImageButton)view.findViewById(R.id.cone_button);
 
-        TextView textview4 = view.findViewById(R.id.textView4);
+        TextView textview4 = view.findViewById(R.id.icecream_type);
 
         simpleImageButtonCup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textview4.setText("Cup");
-            }
-        });
-        simpleImageButtonCone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textview4.setText("Cone");
+                textview4.setText("Ice-Cream Cup");
             }
         });
         simpleImageButtonCandy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textview4.setText("Candy");
+                textview4.setText("Ice-Cream Cone");
             }
         });
-        simpleImageButtonParfait.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textview4.setText("Parfait");
-            }
-        });
-
-
 
     }
 }
