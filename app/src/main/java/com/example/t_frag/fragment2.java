@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,6 +27,8 @@ public class fragment2 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        ImageView scoop_view = (ImageView)view.findViewById(R.id.scoop_display);
+
         ImageButton strawberry = (ImageButton)view.findViewById(R.id.berry);
         ImageButton current = (ImageButton)view.findViewById(R.id.current);
         ImageButton choco = (ImageButton)view.findViewById(R.id.chocolate);
@@ -36,6 +39,7 @@ public class fragment2 extends Fragment {
         strawberry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                scoop_view.setImageResource(R.drawable.berry_scoop);
                 textview2.setText("Strawberry");
             }
         });
@@ -43,6 +47,7 @@ public class fragment2 extends Fragment {
         current.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                scoop_view.setImageResource(R.drawable.current_scoop);
                 textview2.setText("Black Current");
             }
         });
@@ -50,6 +55,7 @@ public class fragment2 extends Fragment {
         choco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                scoop_view.setImageResource(R.drawable.chocolate_scoop);
                 textview2.setText("Chocolate");
             }
         });
@@ -57,6 +63,7 @@ public class fragment2 extends Fragment {
         vanilla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                scoop_view.setImageResource(R.drawable.vanilla_scoop);
                 textview2.setText("Vanilla");
             }
         });

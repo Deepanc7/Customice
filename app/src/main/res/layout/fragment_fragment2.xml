@@ -8,54 +8,54 @@
 
     <ImageButton
         android:id="@+id/berry"
-        android:layout_width="168dp"
-        android:layout_height="126dp"
+        android:layout_width="114dp"
+        android:layout_height="100dp"
         android:background="@color/white"
         android:contentDescription="@string/strawberry_scoop"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintHorizontal_bias="0.036"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.05"
         app:srcCompat="@drawable/berry_scoop"
         tools:ignore="ImageContrastCheck" />
 
     <ImageButton
         android:id="@+id/current"
-        android:layout_width="189dp"
-        android:layout_height="124dp"
+        android:layout_width="113dp"
+        android:layout_height="100dp"
         android:background="@color/white"
         android:contentDescription="black current scoop"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.969"
         app:srcCompat="@drawable/current_scoop" />
 
     <ImageButton
         android:id="@+id/vanilla"
-        android:layout_width="189dp"
-        android:layout_height="124dp"
+        android:layout_width="112dp"
+        android:layout_height="97dp"
         android:background="@color/white"
         android:contentDescription="vanilla scoop"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintHorizontal_bias="0.903"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953"
+        app:layout_constraintVertical_bias="0.044"
         app:srcCompat="@drawable/vanilla_scoop" />
 
     <ImageButton
         android:id="@+id/chocolate"
-        android:layout_width="189dp"
-        android:layout_height="124dp"
+        android:layout_width="119dp"
+        android:layout_height="94dp"
         android:background="@color/white"
         android:contentDescription="chocolate scoop"
         android:scaleType="centerCrop"
@@ -74,6 +74,32 @@
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <ImageView
+        android:id="@+id/type_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cone_plain" />
+
+    <ImageView
+        android:id="@+id/scoop_display"
+        android:layout_width="227dp"
+        android:layout_height="188dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38"
+        app:srcCompat="@drawable/berry_scoop" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
