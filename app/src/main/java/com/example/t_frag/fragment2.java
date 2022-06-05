@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,13 +26,38 @@ public class fragment2 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button button2 = view.findViewById(R.id.button2);
+        ImageButton strawberry = (ImageButton)view.findViewById(R.id.berry);
+        ImageButton current = (ImageButton)view.findViewById(R.id.current);
+        ImageButton choco = (ImageButton)view.findViewById(R.id.chocolate);
+        ImageButton vanilla = (ImageButton)view.findViewById(R.id.vanilla);
+
         TextView textview2 = view.findViewById(R.id.textView2);
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        strawberry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textview2.setText("Flavors");
+                textview2.setText("Strawberry");
+            }
+        });
+
+        current.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textview2.setText("Black Current");
+            }
+        });
+
+        choco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textview2.setText("Chocolate");
+            }
+        });
+
+        vanilla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textview2.setText("Vanilla");
             }
         });
 
