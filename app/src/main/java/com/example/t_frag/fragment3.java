@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,13 +27,24 @@ public class fragment3 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button button3 = view.findViewById(R.id.button3);
+        ImageButton sprinkle_btn = (ImageButton)view.findViewById(R.id.sprinkle_img_btn);
+        ImageButton choco_chip_btn = (ImageButton)view.findViewById(R.id.choco_chip_img_btn);
         TextView textview3 = view.findViewById(R.id.textView3);
+        ImageView toppings = (ImageView)view.findViewById(R.id.topping_img);
 
-        button3.setOnClickListener(new View.OnClickListener() {
+        sprinkle_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textview3.setText("Toppings");
+                toppings.setImageResource(R.drawable.sprinkles);
+                textview3.setText("Sprinkles");
+            }
+        });
+
+        choco_chip_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toppings.setImageResource(R.drawable.choco_chip);
+                textview3.setText("Choco chips");
             }
         });
 
