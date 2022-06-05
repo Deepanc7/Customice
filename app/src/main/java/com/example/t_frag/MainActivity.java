@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(MainActivity.this,MainActivity2.class);
                 startActivity(intent);
+                finish();
             }
         },2000);
     }
