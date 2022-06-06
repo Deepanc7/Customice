@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.t_frag">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.t_frag"
+    >
+
+    <!--Permission for camera-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--Permission to vibrate-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
 
     <application
         android:allowBackup="true"
@@ -9,6 +28,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TFrag">
+
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
@@ -26,8 +49,9 @@
         </activity>
 
         <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:resource="@array/preloaded_fonts"
+            android:value="barcode" />
     </application>
 
 </manifest>
