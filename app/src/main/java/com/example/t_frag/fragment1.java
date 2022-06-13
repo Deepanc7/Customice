@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,14 +32,22 @@ public class fragment1 extends Fragment {
             @Override
             public void onClick(View v) {
                 textview4.setText("Ice-Cream Cup");
+                String ch="1";
+                Bundle result = new Bundle();
+                result.putString("bundleKey", "1");
+                getParentFragmentManager().setFragmentResult("requestKey", result);
             }
         });
         simpleImageButtonCandy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textview4.setText("Ice-Cream Cone");
+                Bundle result = new Bundle();
+                result.putString("bundleKey", "2");
+                getParentFragmentManager().setFragmentResult("requestKey", result);
             }
         });
+
 
     }
 }

@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 
 public class fragment2 extends Fragment {
 
@@ -27,15 +28,42 @@ public class fragment2 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        final String[] a = {new String()};
+
+        getParentFragmentManager().setFragmentResultListener("requestKey", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+                // We use a String here, but any type that can be put in a Bundle is supported
+                String result = bundle.getString("bundleKey");
+                if(result=="2") {
+                    a[0] ="Cone";
+                }
+                else
+                {
+                    a[0] ="Cup";
+                }
+            }
+        });
+
+        ImageView imgView=(ImageView)view.findViewById(R.id.imageView);
+
         ImageView scoop_view = (ImageView)view.findViewById(R.id.scoop_display);
 
         ImageButton strawberry = (ImageButton)view.findViewById(R.id.berry);
         ImageButton current = (ImageButton)view.findViewById(R.id.current);
         ImageButton choco = (ImageButton)view.findViewById(R.id.chocolate);
         ImageButton vanilla = (ImageButton)view.findViewById(R.id.vanilla);
+        Button set1=(Button)view.findViewById(R.id.button);
 
         TextView textview2 = view.findViewById(R.id.textView2);
+        TextView textview6 = view.findViewById(R.id.textView6);
 
+        set1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textview6.setText(a[0]);
+            }
+        });
         strawberry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
