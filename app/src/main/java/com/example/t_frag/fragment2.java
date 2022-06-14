@@ -42,6 +42,8 @@ public class fragment2 extends Fragment {
                 {
                     a[0] ="Cup";
                 }
+                TextView textview6 = view.findViewById(R.id.textView6);
+                textview6.setText(a[0]);
             }
         });
 
@@ -53,17 +55,19 @@ public class fragment2 extends Fragment {
         ImageButton current = (ImageButton)view.findViewById(R.id.current);
         ImageButton choco = (ImageButton)view.findViewById(R.id.chocolate);
         ImageButton vanilla = (ImageButton)view.findViewById(R.id.vanilla);
-        Button set1=(Button)view.findViewById(R.id.button);
+        //Button set1=(Button)view.findViewById(R.id.button);
 
         TextView textview2 = view.findViewById(R.id.textView2);
-        TextView textview6 = view.findViewById(R.id.textView6);
+        //TextView textview6 = view.findViewById(R.id.textView6);
 
-        set1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                textview6.setText(a[0]);
-            }
-        });
+        //textview6.setText(a[0]);
+
+        //set1.setOnClickListener(new View.OnClickListener() {
+            //@Override
+            //public void onClick(View v) {
+                //textview6.setText(a[0]);
+            //}
+        //});
         strawberry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
