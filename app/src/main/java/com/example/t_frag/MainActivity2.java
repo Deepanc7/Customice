@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity2 extends AppCompatActivity {
     ImageView imageView;
     Button next_btn;
-    String data;
+    String a;
     TextView rcv;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,19 +21,19 @@ public class MainActivity2 extends AppCompatActivity {
 
         next_btn = (Button) findViewById(R.id.next_button);
 
+        Bundle bundle=getIntent().getBundleExtra("a");
+        a=bundle.getString("data");
+        rcv = (TextView) findViewById(R.id.textView5);
+        rcv.setText("Welcome to "+a);
+
         next_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(getApplicationContext(),Frag.class);
                 startActivity(intent);
+
             }
         });
-        //data=MainActivity3.getActivityInstance().getData();
-
-        //rcv = (TextView) findViewById(R.id.textView5);
-        //Intent intent = getIntent();
-        //String str = intent.getStringExtra("data");
-        //rcv.setText("Welcome to ", TextView.BufferType.valueOf(str));
 
     }
     }
