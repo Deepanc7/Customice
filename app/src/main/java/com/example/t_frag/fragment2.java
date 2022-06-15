@@ -79,6 +79,10 @@ public class fragment2 extends Fragment {
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.berry_scoop);
                 textview2.setText("Strawberry");
+                String ch="Strawberry";
+                Bundle result = new Bundle();
+                result.putString("bundleKeyFlavour", "Strawberry");
+                getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
 
@@ -87,6 +91,10 @@ public class fragment2 extends Fragment {
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.current_scoop);
                 textview2.setText("Black Current");
+                String ch="BlackCurrent";
+                Bundle result = new Bundle();
+                result.putString("bundleKeyFlavour", "BlackCurrent");
+                getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
 
@@ -95,6 +103,10 @@ public class fragment2 extends Fragment {
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.chocolate_scoop);
                 textview2.setText("Chocolate");
+                String ch="Chocolate";
+                Bundle result = new Bundle();
+                result.putString("bundleKeyFlavour", "Chocolate");
+                getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
 
@@ -103,6 +115,10 @@ public class fragment2 extends Fragment {
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.vanilla_scoop);
                 textview2.setText("Vanilla");
+                String ch="Vanilla";
+                Bundle result = new Bundle();
+                result.putString("bundleKeyFlavour", "Vanilla");
+                getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
 

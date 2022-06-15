@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 
 public class fragment3 extends Fragment {
 
@@ -26,6 +27,35 @@ public class fragment3 extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+//        final String[] a = {new String()};
+
+        getParentFragmentManager().setFragmentResultListener("requestKeyFlavour", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+                // We use a String here, but any type that can be put in a Bundle is supported
+                ImageView typeImg = (ImageView)view.findViewById(R.id.type_img);
+                ImageView FlavourImg = (ImageView) view.findViewById(R.id.flavour_img);
+
+                String resultType = bundle.getString("bundleKey");
+                String resultFlavour = bundle.getString("bundleKeyFlavour");
+
+                if(resultType=="2") {
+                    typeImg.setImageResource(R.drawable.cone_plain);
+                }
+                else
+                {
+                    typeImg.setImageResource(R.drawable.cup_plain);
+                }
+
+                switch (resultFlavour){
+                    case "Strawberry": FlavourImg.setImageResource(R.drawable.berry_scoop); break;
+                    case "BlackCurrent": FlavourImg.setImageResource(R.drawable.current_scoop); break;
+                    case "Chocolate": FlavourImg.setImageResource(R.drawable.chocolate_scoop); break;
+                    case "Vanilla": FlavourImg.setImageResource(R.drawable.vanilla_scoop); break;
+                }
+            }
+        });
 
         ImageButton sprinkle_btn = (ImageButton)view.findViewById(R.id.sprinkle_img_btn);
         ImageButton choco_chip_btn = (ImageButton)view.findViewById(R.id.choco_chip_img_btn);
