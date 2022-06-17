@@ -92,8 +92,8 @@
 
     <ImageView
         android:id="@+id/scoop_display"
-        android:layout_width="227dp"
-        android:layout_height="188dp"
+        android:layout_width="288dp"
+        android:layout_height="218dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.43"

@@ -1,6 +1,7 @@
 package com.example.t_frag;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,7 @@ import androidx.fragment.app.FragmentResultListener;
 
 public class fragment3 extends Fragment {
 
+    Button next_btn;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -30,23 +32,15 @@ public class fragment3 extends Fragment {
 
 //        final String[] a = {new String()};
 
+        final String[] a = {new String()};
         getParentFragmentManager().setFragmentResultListener("requestKeyFlavour", this, new FragmentResultListener() {
             @Override
             public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
                 // We use a String here, but any type that can be put in a Bundle is supported
-                ImageView typeImg = (ImageView)view.findViewById(R.id.type_img);
                 ImageView FlavourImg = (ImageView) view.findViewById(R.id.flavour_img);
 
-                String resultType = bundle.getString("bundleKey");
+                //String resultType = bundle.getString("bundleKey");
                 String resultFlavour = bundle.getString("bundleKeyFlavour");
-
-                if(resultType=="2") {
-                    typeImg.setImageResource(R.drawable.cone_plain);
-                }
-                else
-                {
-                    typeImg.setImageResource(R.drawable.cup_plain);
-                }
 
                 switch (resultFlavour){
                     case "Strawberry": FlavourImg.setImageResource(R.drawable.berry_scoop); break;
@@ -57,6 +51,23 @@ public class fragment3 extends Fragment {
             }
         });
 
+        getParentFragmentManager().setFragmentResultListener("requestKeyType", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKeyType, @NonNull Bundle bundle) {
+                // We use a String here, but any type that can be put in a Bundle is supported
+                ImageView typeImg = (ImageView)view.findViewById(R.id.imageView2);
+
+                String result1 = bundle.getString("bundleKeyType");
+
+                if(result1=="2") {
+                    typeImg.setImageResource(R.drawable.cone_plain);
+                }
+                else
+                {
+                    typeImg.setImageResource(R.drawable.cup_plain);
+                }
+            }
+        });
         ImageButton sprinkle_btn = (ImageButton)view.findViewById(R.id.sprinkle_img_btn);
         ImageButton choco_chip_btn = (ImageButton)view.findViewById(R.id.choco_chip_img_btn);
         TextView textview3 = view.findViewById(R.id.textView3);
@@ -66,8 +77,9 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.sprinkles);
-                textview3.setText("Sprinkles");
+                textview3.setText(a[0]);
             }
+
         });
 
         choco_chip_btn.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +89,15 @@ public class fragment3 extends Fragment {
                 textview3.setText("Choco chips");
             }
         });
+        Intent intent = new Intent(getActivity(), MainActivity3.class);
+        final Button button = (Button) view.findViewById(R.id.next_button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -50,6 +49,10 @@ public class fragment2 extends Fragment {
                     textview6.setText("Cup");
                     typeImg.setImageResource(R.drawable.cup_plain);
                 }
+                Bundle result1 = new Bundle();
+                result1.putString("bundleKeyType", result);
+                getParentFragmentManager().setFragmentResult("requestKeyType", result1);
+
             }
         });
 
@@ -61,19 +64,9 @@ public class fragment2 extends Fragment {
         ImageButton current = (ImageButton)view.findViewById(R.id.current);
         ImageButton choco = (ImageButton)view.findViewById(R.id.chocolate);
         ImageButton vanilla = (ImageButton)view.findViewById(R.id.vanilla);
-        //Button set1=(Button)view.findViewById(R.id.button);
 
         TextView textview2 = view.findViewById(R.id.textView2);
-        //TextView textview6 = view.findViewById(R.id.textView6);
 
-        //textview6.setText(a[0]);
-
-        //set1.setOnClickListener(new View.OnClickListener() {
-            //@Override
-            //public void onClick(View v) {
-                //textview6.setText(a[0]);
-            //}
-        //});
         strawberry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
