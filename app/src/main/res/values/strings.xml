@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">T-Frag</string>
+    <string name="app_name">Customice</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="send_data_to_fragment_1">Send Data to Fragment 1</string>
