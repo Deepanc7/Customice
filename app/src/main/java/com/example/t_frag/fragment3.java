@@ -89,7 +89,7 @@ public class fragment3 extends Fragment {
                 textview3.setText("Choco chips");
             }
         });
-        Intent intent = new Intent(getActivity(), MainActivity3.class);
+        Intent intent = new Intent(getActivity(), Store.class);
         final Button button = (Button) view.findViewById(R.id.next_button);
 
         button.setOnClickListener(new View.OnClickListener() {

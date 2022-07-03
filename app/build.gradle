@@ -45,5 +45,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation ('eu.livotov.labs.android:CAMView:2.0.1@aar') {transitive=true}
+    implementation 'com.itextpdf:itextpdf:5.0.6'
 
 }

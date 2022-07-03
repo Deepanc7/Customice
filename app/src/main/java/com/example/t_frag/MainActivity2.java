@@ -23,7 +23,6 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent(getApplicationContext(),Frag.class);
                 startActivity(intent);
-
             }
         });
 

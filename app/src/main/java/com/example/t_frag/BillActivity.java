@@ -11,6 +11,7 @@ public class BillActivity extends AppCompatActivity {
 
     String a;
     TextView rcv;
+    private static final int PERMISSION_REQUEST_CODE = 200;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,5 +26,6 @@ public class BillActivity extends AppCompatActivity {
                 rcv.setText("Table No:"+a);
             }
         },800);
+
     }
 }

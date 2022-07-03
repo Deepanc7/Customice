@@ -14,15 +14,19 @@
     <eu.livotov.labs.android.camview.ScannerLiveView
         android:id="@+id/camview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="701dp" >
 
-
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose store manually" />
     </eu.livotov.labs.android.camview.ScannerLiveView>
 
     <TextView
         android:id="@+id/idTVscanned"
         android:layout_width="match_parent"
-        android:layout_height="79dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/white"
         android:padding="5dp"

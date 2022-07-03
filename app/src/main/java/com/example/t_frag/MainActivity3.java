@@ -6,6 +6,8 @@ import static android.Manifest.permission.VIBRATE;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,12 +21,22 @@ import eu.livotov.labs.android.camview.scanner.decoder.zxing.ZXDecoder;
 public class MainActivity3 extends AppCompatActivity {
     private ScannerLiveView camera;
     private TextView scannedTV;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
+        btn=findViewById(R.id.button);
+        btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(),StoreActivity.class);
+                startActivity(intent);
+
+            }
+        });
         if (checkPermission()) {
             Toast.makeText(this, "Permission Granted..", Toast.LENGTH_SHORT).show();
         } else {
