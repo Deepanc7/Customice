@@ -19,29 +19,72 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"></pl.droidsonroids.gif.GifImageView>
 
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="215dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/covered_by_your_grace"
+        android:text="Select Store"
+        android:textAlignment="center"
+        android:textColor="#62216E"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446" />
+
     <Spinner
         android:id="@+id/dynamic_spinner3"
         android:layout_width="296dp"
         android:layout_height="52dp"
-        android:background="#E48EF3"
-        android:popupBackground="#E48EF3"
+        android:background="#FAE9FD"
+        android:popupBackground="#FAE9FD"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313" />
+        app:layout_constraintVertical_bias="0.567" />
+
+    <Spinner
+        android:id="@+id/dynamic_spinner4"
+        android:layout_width="296dp"
+        android:layout_height="52dp"
+        android:background="#FAE9FD"
+        android:popupBackground="#FAE9FD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="157dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/covered_by_your_grace"
+        android:text="Select City"
+        android:textAlignment="center"
+        android:textColor="#62216E"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Generate Bill"
+        android:text="Generate bill"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.765" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

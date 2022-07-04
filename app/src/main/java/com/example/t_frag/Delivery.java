@@ -22,6 +22,20 @@ public class Delivery extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
+        btn1=(Button)findViewById(R.id.button2);
+        editext=(EditText)findViewById(R.id.edit);
+        btn1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if (editext!=null) {
+                    Bundle bundle=new Bundle();
+                    bundle.putString("data1", String.valueOf(editext));
+                    Intent it=new Intent(getApplicationContext(),BillActivity.class);
+                    it.putExtra("b",bundle);
+                    startActivity(it);
+                }
+            }
+        });
 
         dynamicSpinner3 = (Spinner) findViewById(R.id.dynamic_spinner3);
 
@@ -66,17 +80,5 @@ public class Delivery extends AppCompatActivity {
             }
         });
 
-        editext=(EditText)findViewById(R.id.edit);
-        
-        btn1=(Button)findViewById(R.id.button2);
-        btn1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                if (editext!=null) {
-                    Intent intent = new Intent(getApplicationContext(), BillActivity.class);
-                    startActivity(intent);
-                }
-            }
-        });
     }
 }

@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/covered_by_your_grace"
         android:text="Enter Address"
+        android:textColor="#530760"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/gifImageView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +38,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/covered_by_your_grace"
-        android:text="Enter nearest store"
+        android:text=" Select nearest store"
+        android:textColor="#530760"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/gifImageView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +54,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/covered_by_your_grace"
         android:text="Enter City"
+        android:textColor="#530760"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/gifImageView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,13 +105,13 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Generate Bill"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Generate bill"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891" />
+        app:layout_constraintVertical_bias="0.89" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
