@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class Store extends AppCompatActivity {
     private Spinner dynamicSpinner1;
     private Spinner dynamicSpinner2;
     TextView rcv;
+    String c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +61,20 @@ public class Store extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 Log.v("item2", (String) parent.getItemAtPosition(position));
-                    String c = parent.getItemAtPosition(position).toString();
-                if(c=="Home Delivery")
-                {
-                    Intent intent = new Intent(Store.this,Delivery.class);
+                c = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
+            }
+        });
+        Button button = (Button) findViewById(R.id.next_button2);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if(c=="Home Delivery") {
+                    Intent intent = new Intent(Store.this, Delivery.class);
                     startActivity(intent);
                 }
                 else
@@ -71,11 +83,7 @@ public class Store extends AppCompatActivity {
                     startActivity(intent);
                 }
             }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
-            }
         });
+
     }
 }

@@ -7,6 +7,7 @@
     tools:context=".Store">
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -17,6 +18,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"></pl.droidsonroids.gif.GifImageView>
+
+    <Button
+        android:id="@+id/next_button2"
+        android:layout_width="112dp"
+        android:layout_height="56dp"
+        android:background="@android:color/holo_orange_light"
+        android:fontFamily="@font/barriecito"
+        android:onClick="buttonClick"
+        android:text="NEXT"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.881" />
 
     <Spinner
         android:id="@+id/dynamic_spinner1"
