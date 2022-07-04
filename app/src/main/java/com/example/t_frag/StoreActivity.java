@@ -13,22 +13,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class StoreActivity extends AppCompatActivity {
 
-    Button next_btn;
     private Spinner dynamicSpinner3;
     private Spinner dynamicSpinner4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store2);
-        next_btn = (Button) findViewById(R.id.button3);
 
-        next_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(getApplicationContext(),BillActivity.class);
-                startActivity(intent);
-            }
-        });
         dynamicSpinner3 = (Spinner) findViewById(R.id.dynamic_spinner3);
 
         String[] items = new String[]{"Store 1", "Store 2", "Store 3"};
@@ -73,5 +64,13 @@ public class StoreActivity extends AppCompatActivity {
             }
         });
 
+        Button button = (Button)findViewById(R.id.next_button4);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), BillActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

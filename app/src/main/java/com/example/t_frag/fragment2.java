@@ -27,27 +27,19 @@ public class fragment2 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        final String[] a = {new String()};
-
         getParentFragmentManager().setFragmentResultListener("requestKey", this, new FragmentResultListener() {
             @Override
             public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
                 // We use a String here, but any type that can be put in a Bundle is supported
-                ImageView typeImg = (ImageView)view.findViewById(R.id.type_display);
-                TextView textview2 = view.findViewById(R.id.textView2);
-
+                ImageView typeImg = (ImageView)view.findViewById(R.id.imageView3);
 
                 String result = bundle.getString("bundleKey");
 
                 if(result=="2") {
-//                    a[0] ="Cone";
-                    textview2.setText("Cone Base");
                     typeImg.setImageResource(R.drawable.cone_plain);
                 }
                 else
                 {
-//                    a[0] ="Cup";
-                    textview2.setText("Cup Base");
                     typeImg.setImageResource(R.drawable.cup_plain);
                 }
                 Bundle result1 = new Bundle();
@@ -60,7 +52,7 @@ public class fragment2 extends Fragment {
         ImageView imgView=(ImageView)view.findViewById(R.id.imageView);
         TextView textview6 = view.findViewById(R.id.textView6);
 
-        ImageView scoop_view = (ImageView)view.findViewById(R.id.scoop_display);
+        ImageView scoop_view = (ImageView)view.findViewById(R.id.flavour_img2);
 
         ImageButton strawberry = (ImageButton)view.findViewById(R.id.berry);
         ImageButton current = (ImageButton)view.findViewById(R.id.current);

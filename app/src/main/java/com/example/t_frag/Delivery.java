@@ -16,26 +16,11 @@ public class Delivery extends AppCompatActivity {
 
     private Spinner dynamicSpinner3;
     private Spinner dynamicSpinner4;
-    Button btn1;
     EditText editext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
-        btn1=(Button)findViewById(R.id.button2);
-        editext=(EditText)findViewById(R.id.edit);
-        btn1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                if (editext!=null) {
-                    Bundle bundle=new Bundle();
-                    bundle.putString("data1", String.valueOf(editext));
-                    Intent it=new Intent(getApplicationContext(),BillActivity.class);
-                    it.putExtra("b",bundle);
-                    startActivity(it);
-                }
-            }
-        });
 
         dynamicSpinner3 = (Spinner) findViewById(R.id.dynamic_spinner3);
 
@@ -80,5 +65,13 @@ public class Delivery extends AppCompatActivity {
             }
         });
 
+        Button button = (Button)findViewById(R.id.next_button3);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Delivery.this, BillActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

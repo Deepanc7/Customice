@@ -18,11 +18,8 @@ public class BillActivity extends AppCompatActivity {
 
         Bundle bundle=getIntent().getBundleExtra("a");
         a=bundle.getString("data");
-        Bundle bundle1=getIntent().getBundleExtra("b");
-        b=bundle.getString("data1");
         rcv = (TextView) findViewById(R.id.textView8);
-        rcv = (TextView) findViewById(R.id.textView14);
         rcv.setText("Table No:"+a);
-        address.setText("Address:"+b);
+
     }
 }
