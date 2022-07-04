@@ -1,5 +1,7 @@
 package com.example.t_frag;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,12 +21,14 @@ public class fragment1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fragment1, container, false);
         return view;
     }
+    //SharedPreferences preferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ImageButton simpleImageButtonCup = (ImageButton)view.findViewById(R.id.cup_button);
         ImageButton simpleImageButtonCandy = (ImageButton)view.findViewById(R.id.cone_button);
+
 
         TextView textview4 = view.findViewById(R.id.icecream_type);
 
@@ -34,6 +38,7 @@ public class fragment1 extends Fragment {
                 textview4.setText("Ice-Cream Cup");
                 String ch="1";
                 Bundle result = new Bundle();
+
                 result.putString("bundleKey", "1");
                 getParentFragmentManager().setFragmentResult("requestKey", result);
             }

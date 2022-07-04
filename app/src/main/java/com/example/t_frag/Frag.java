@@ -1,6 +1,7 @@
 package com.example.t_frag;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ public class Frag extends AppCompatActivity {
         setContentView(R.layout.activity_frag);
 
         TabLayout tabLayout = findViewById(R.id._tab);
+        //SharedPreferences pref = getSharedPreferences("base", MODE_PRIVATE);
         ViewPager2 viewPager = findViewById(R.id.viewpager);
 
         tabLayout.addTab(tabLayout.newTab().setText("Frag 1"), 0);
