@@ -34,19 +34,20 @@ public class fragment2 extends Fragment {
             public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
                 // We use a String here, but any type that can be put in a Bundle is supported
                 ImageView typeImg = (ImageView)view.findViewById(R.id.type_display);
-                TextView textview6 = view.findViewById(R.id.textView6);
+                TextView textview2 = view.findViewById(R.id.textView2);
+
 
                 String result = bundle.getString("bundleKey");
 
                 if(result=="2") {
 //                    a[0] ="Cone";
-                    textview6.setText("Cone");
+                    textview2.setText("Cone Base");
                     typeImg.setImageResource(R.drawable.cone_plain);
                 }
                 else
                 {
 //                    a[0] ="Cup";
-                    textview6.setText("Cup");
+                    textview2.setText("Cup Base");
                     typeImg.setImageResource(R.drawable.cup_plain);
                 }
                 Bundle result1 = new Bundle();
@@ -57,6 +58,7 @@ public class fragment2 extends Fragment {
         });
 
         ImageView imgView=(ImageView)view.findViewById(R.id.imageView);
+        TextView textview6 = view.findViewById(R.id.textView6);
 
         ImageView scoop_view = (ImageView)view.findViewById(R.id.scoop_display);
 
@@ -65,13 +67,14 @@ public class fragment2 extends Fragment {
         ImageButton choco = (ImageButton)view.findViewById(R.id.chocolate);
         ImageButton vanilla = (ImageButton)view.findViewById(R.id.vanilla);
 
-        TextView textview2 = view.findViewById(R.id.textView2);
+
+
 
         strawberry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.berry_scoop);
-                textview2.setText("Strawberry");
+                textview6.setText("Flavor: Strawberry");
                 String ch="Strawberry";
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Strawberry");
@@ -83,7 +86,7 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.current_scoop);
-                textview2.setText("Black Current");
+                textview6.setText("Flavor: Black Current");
                 String ch="BlackCurrent";
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "BlackCurrent");
@@ -95,7 +98,7 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.chocolate_scoop);
-                textview2.setText("Chocolate");
+                textview6.setText("Flavor: Chocolate");
                 String ch="Chocolate";
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Chocolate");
@@ -107,7 +110,7 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.vanilla_scoop);
-                textview2.setText("Vanilla");
+                textview6.setText("Flavor: Vanilla");
                 String ch="Vanilla";
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Vanilla");

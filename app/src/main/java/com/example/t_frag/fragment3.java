@@ -71,13 +71,14 @@ public class fragment3 extends Fragment {
         ImageButton sprinkle_btn = (ImageButton)view.findViewById(R.id.sprinkle_img_btn);
         ImageButton choco_chip_btn = (ImageButton)view.findViewById(R.id.choco_chip_img_btn);
         TextView textview3 = view.findViewById(R.id.textView3);
+        TextView textview12 = view.findViewById(R.id.textView12);
         ImageView toppings = (ImageView)view.findViewById(R.id.topping_img);
 
         sprinkle_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.sprinkles);
-                textview3.setText(a[0]);
+                textview12.setText("Topping: Sprinkles");
             }
 
         });
@@ -86,7 +87,7 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.choco_chip);
-                textview3.setText("Choco chips");
+                textview12.setText("Topping: Choco Chips");
             }
         });
         Intent intent = new Intent(getActivity(), Store.class);
