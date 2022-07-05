@@ -15,6 +15,7 @@ public class StoreActivity extends AppCompatActivity {
 
     private Spinner dynamicSpinner3;
     private Spinner dynamicSpinner4;
+    String data, data1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +35,7 @@ public class StoreActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 Log.v("item", (String) parent.getItemAtPosition(position));
-
+                data1 = (String) parent.getItemAtPosition(position);
             }
 
             @Override
@@ -56,7 +57,7 @@ public class StoreActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 Log.v("item1", (String) parent.getItemAtPosition(position));
-
+                data = (String) parent.getItemAtPosition(position);
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
@@ -68,8 +69,14 @@ public class StoreActivity extends AppCompatActivity {
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), BillActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(getBaseContext(), BillActivity.class);
+                //startActivity(intent);
+                Bundle bundle=new Bundle();
+                bundle.putString("data",data);
+                bundle.putString("data1", data1);
+                Intent it=new Intent(getApplicationContext(),BillActivity.class);
+                it.putExtra("a",bundle);
+                startActivity(it);
             }
         });
     }

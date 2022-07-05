@@ -68,14 +68,15 @@ public class Delivery extends AppCompatActivity {
         });
 
         e=(EditText)findViewById(R.id.edit);
-        String e1=e.getText().toString();
+        //String e1=e.getText().toString();
         Button button = (Button)findViewById(R.id.next_button3);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                String e1=e.getText().toString();
                 Bundle bundle=new Bundle();
                 bundle.putString("data", e1);
-                Intent it=new Intent(getApplicationContext(),BillActivity.class);
+                Intent it=new Intent(getBaseContext(),BillActivity.class);
                 it.putExtra("a",bundle);
                 startActivity(it);
             }
