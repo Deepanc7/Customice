@@ -69,7 +69,7 @@ public class Delivery extends AppCompatActivity {
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Delivery.this, BillActivity.class);
+                Intent intent = new Intent(getBaseContext(), BillActivity.class);
                 startActivity(intent);
             }
         });
