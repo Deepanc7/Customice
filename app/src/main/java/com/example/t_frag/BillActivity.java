@@ -16,9 +16,9 @@ public class BillActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
 
-        //Bundle bundle=getIntent().getBundleExtra("a");
-        //a=bundle.getString("data");
-        a = "Test String";
+        Bundle bundle=getIntent().getBundleExtra("a");
+        a=bundle.getString("data");
+        //a = "Test String";
         rcv = (TextView) findViewById(R.id.textView8);
         rcv.setText(a);
 

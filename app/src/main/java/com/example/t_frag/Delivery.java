@@ -16,7 +16,8 @@ public class Delivery extends AppCompatActivity {
 
     private Spinner dynamicSpinner3;
     private Spinner dynamicSpinner4;
-    EditText editext;
+    EditText e;
+    String c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +58,7 @@ public class Delivery extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 Log.v("item1", (String) parent.getItemAtPosition(position));
+                c=(String)parent.getItemAtPosition(position);
 
             }
 
@@ -65,12 +67,17 @@ public class Delivery extends AppCompatActivity {
             }
         });
 
+        e=(EditText)findViewById(R.id.edit);
+        String e1=e.getText().toString();
         Button button = (Button)findViewById(R.id.next_button3);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), BillActivity.class);
-                startActivity(intent);
+                Bundle bundle=new Bundle();
+                bundle.putString("data", e1);
+                Intent it=new Intent(getApplicationContext(),BillActivity.class);
+                it.putExtra("a",bundle);
+                startActivity(it);
             }
         });
     }
