@@ -8,12 +8,12 @@
 
     <Button
         android:id="@+id/next_button"
-        android:onClick="buttonClick"
-        android:layout_width="112dp"
-        android:layout_height="56dp"
+        android:layout_width="204dp"
+        android:layout_height="55dp"
         android:background="@android:color/holo_orange_light"
         android:fontFamily="@font/barriecito"
-        android:text="NEXT"
+        android:onClick="buttonClick"
+        android:text="Generate Bill"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,28 +66,7 @@
         app:layout_constraintVertical_bias="0.06"
         app:srcCompat="@drawable/choco_chip" />
 
-    <ImageView
-        android:id="@+id/flavour_img"
-        android:layout_width="276dp"
-        android:layout_height="441dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084"
-        app:srcCompat="@drawable/current_scoop" />
 
-    <ImageView
-        android:id="@+id/topping_img"
-        android:layout_width="336dp"
-        android:layout_height="504dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/choco_chip" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -95,11 +74,35 @@
         android:layout_height="631dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/cone_plain" />
+
+    <ImageView
+        android:id="@+id/flavour_img"
+        android:layout_width="267dp"
+        android:layout_height="406dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topping_img"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.377"
+        app:srcCompat="@drawable/current_scoop" />
+
+    <ImageView
+        android:id="@+id/topping_img"
+        android:layout_width="336dp"
+        android:layout_height="504dp"
+        app:layout_constraintBottom_toTopOf="@+id/next_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.146"
+        app:srcCompat="@drawable/choco_chip" />
 
     <TextView
         android:id="@+id/textView12"
@@ -116,5 +119,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.78" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs. 39"
+        app:layout_constraintBottom_toBottomOf="@+id/sprinkle_img_btn"
+        app:layout_constraintEnd_toStartOf="@+id/choco_chip_img_btn"
+        app:layout_constraintHorizontal_bias="0.591"
+        app:layout_constraintStart_toStartOf="@+id/sprinkle_img_btn"
+        app:layout_constraintTop_toTopOf="@+id/sprinkle_img_btn"
+        app:layout_constraintVertical_bias="0.564" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs. 79"
+        app:layout_constraintBottom_toBottomOf="@+id/choco_chip_img_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/choco_chip_img_btn"
+        app:layout_constraintTop_toTopOf="@+id/choco_chip_img_btn"
+        app:layout_constraintVertical_bias="0.551" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
