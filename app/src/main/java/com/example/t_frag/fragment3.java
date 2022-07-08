@@ -32,7 +32,7 @@ public class fragment3 extends Fragment {
 
 //        final String[] a = {new String()};
 
-        final String[] a = {new String()};
+        //final String[] a = {new String()};
         getParentFragmentManager().setFragmentResultListener("requestKeyFlavour", this, new FragmentResultListener() {
             @Override
             public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
@@ -43,10 +43,14 @@ public class fragment3 extends Fragment {
                 String resultFlavour = bundle.getString("bundleKeyFlavour");
 
                 switch (resultFlavour){
-                    case "Strawberry": FlavourImg.setImageResource(R.drawable.berry_scoop); break;
-                    case "BlackCurrent": FlavourImg.setImageResource(R.drawable.current_scoop); break;
+                    case "Strawberry": FlavourImg.setImageResource(R.drawable.strawberry_scoop); break;
+                    case "Blueberry": FlavourImg.setImageResource(R.drawable.blueberry_scoop); break;
                     case "Chocolate": FlavourImg.setImageResource(R.drawable.chocolate_scoop); break;
                     case "Vanilla": FlavourImg.setImageResource(R.drawable.vanilla_scoop); break;
+                    case "Mango": FlavourImg.setImageResource(R.drawable.mango_scoop); break;
+                    case "Bluemoon": FlavourImg.setImageResource(R.drawable.bluemoon_scoop); break;
+                    case "Cottoncandy": FlavourImg.setImageResource(R.drawable.cottoncandy_scoop); break;
+                    case "Mintchoco": FlavourImg.setImageResource(R.drawable.mintchoco_scoop); break;
                 }
             }
         });
@@ -55,7 +59,7 @@ public class fragment3 extends Fragment {
             @Override
             public void onFragmentResult(@NonNull String requestKeyType, @NonNull Bundle bundle) {
                 // We use a String here, but any type that can be put in a Bundle is supported
-                ImageView typeImg = (ImageView)view.findViewById(R.id.imageView2);
+                ImageView typeImg = (ImageView)view.findViewById(R.id.typeimg);
 
                 String result1 = bundle.getString("bundleKeyType");
 
@@ -71,14 +75,14 @@ public class fragment3 extends Fragment {
         ImageButton sprinkle_btn = (ImageButton)view.findViewById(R.id.sprinkle_img_btn);
         ImageButton choco_chip_btn = (ImageButton)view.findViewById(R.id.choco_chip_img_btn);
         TextView textview3 = view.findViewById(R.id.textView3);
-        TextView textview12 = view.findViewById(R.id.textView12);
+        //TextView textview12 = view.findViewById(R.id.textView12);
         ImageView toppings = (ImageView)view.findViewById(R.id.topping_img);
 
         sprinkle_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.sprinkles);
-                textview12.setText("Topping: Sprinkles");
+                textview3.setText("Topping: Sprinkles");
             }
 
         });
@@ -87,7 +91,7 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.choco_chip);
-                textview12.setText("Topping: Choco Chips");
+                textview3.setText("Topping: Choco Chips");
             }
         });
         Button button = (Button) view.findViewById(R.id.next_button);
