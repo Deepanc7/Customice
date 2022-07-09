@@ -144,6 +144,7 @@
         android:id="@+id/total_text_frag2"
         android:layout_width="211dp"
         android:layout_height="30dp"
+        android:fontFamily="@font/fredoka_one"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -369,6 +370,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.744" />
+
+    <TextView
+        android:id="@+id/total_price_frag2"
+        android:layout_width="160dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/fredoka_one"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

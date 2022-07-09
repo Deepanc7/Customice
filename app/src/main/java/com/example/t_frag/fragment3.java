@@ -110,14 +110,14 @@ public class fragment3 extends Fragment {
         ImageButton chocolatetopping = (ImageButton) view.findViewById(R.id.chocolate);
         ImageButton notopping = (ImageButton) view.findViewById(R.id.no_topping);
 
-        //TextView textview12 = view.findViewById(R.id.textView12);
+        TextView textview3 = view.findViewById(R.id.textView3);
         ImageView toppings = (ImageView) view.findViewById(R.id.topping_img);
 
         notopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.empty);
-                //textview3.setText("No topping");
+                textview3.setText("Total: Rs."+total3);
                 total3+=0;
                 a="No topping";
             }
@@ -128,7 +128,7 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.chocolate_topping);
-                //textview3.setText("Chocolate Sauce");
+                textview3.setText("Total: Rs."+total3);
                 total3+=36;
                 a="Chocolate Sauce";
             }
@@ -139,7 +139,7 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.strawberry_topping);
-                //textview3.setText("Strawberry Sauce");
+                textview3.setText("Total: Rs."+total3);
                 total3+=36;
                 a="Strawberry Sauce";
             }
@@ -149,7 +149,7 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.caramel_topping);
-                //textview3.setText("Caramel sauce");
+                textview3.setText("Total: Rs."+total3);
                 total3+=49;
                 a="Caramel sauce";
             }
@@ -159,7 +159,7 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.coconut_topping);
-                //textview3.setText("Coconut Shavings");
+                textview3.setText("Total: Rs."+total3);
                 total3+=33;
                 a="Coconut Shavings";
             }
@@ -169,7 +169,7 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.sprinkles_topping);
-                //textview3.setText("Sprinkles");
+                textview3.setText("Total: Rs."+total3);
                 total3+=29;
                 a="Sprinkled";
             }
@@ -180,7 +180,7 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.choco_chip_topping);
-                //textview3.setText("Choco Chips");
+                textview3.setText("Total: Rs."+total3);
                 total3+=55;
                 a="Choco chip";
             }
