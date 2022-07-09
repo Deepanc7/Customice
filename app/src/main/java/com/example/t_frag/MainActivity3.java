@@ -100,16 +100,12 @@ public class MainActivity3 extends AppCompatActivity {
 
 
     private void requestPermission() {
-        // this method is to request
-        // the runtime permission.
         int PERMISSION_REQUEST_CODE = 200;
         ActivityCompat.requestPermissions(this, new String[]{CAMERA, VIBRATE}, PERMISSION_REQUEST_CODE);
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        // this method is called when user
-        // allows the permission to use camera.
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (grantResults.length > 0) {
             boolean cameraaccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
