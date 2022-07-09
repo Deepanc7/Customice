@@ -15,7 +15,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
 
 public class fragment2 extends Fragment {
-    int total =0;
+    int total =0,i=0,b=0;
+    String result;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -33,17 +34,18 @@ public class fragment2 extends Fragment {
                 // We use a String here, but any type that can be put in a Bundle is supported
                 ImageView typeImg = (ImageView)view.findViewById(R.id.imageView3);
 
-                String result = bundle.getString("bundleKey");
+                result = bundle.getString("bundleKey");
 
                 if(result=="2") {
-                    total+=60;
+                    b=60;
                     typeImg.setImageResource(R.drawable.cone_plain);
                 }
                 else
                 {
-                    total+=30;
+                    b=30;
                     typeImg.setImageResource(R.drawable.cup_plain);
                 }
+
                 Bundle result1 = new Bundle();
                 result1.putString("bundleKeyType", result);
                 getParentFragmentManager().setFragmentResult("requestKeyType", result1);
@@ -70,9 +72,10 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.cottoncandy_scoop);
-                total+=110;
+                i=110;
+
                 textview6.setText("Cotton Candy");
-                totalFrag2.setText("Total: Rs." + total);
+                totalFrag2.setText("Total: Rs." + (b+i));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Cottoncandy");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -82,9 +85,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.bluemoon_scoop);
-                total+=100;
+                i=100;
                 textview6.setText("Bluemoon");
-                totalFrag2.setText("Total: Rs." + total);
+                totalFrag2.setText("Total: Rs." + (b+i));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Bluemoon");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -94,9 +97,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.mintchoco_scoop);
-                total+=90;
+                i=90;
                 textview6.setText("Mint Choco-Chip");
-                totalFrag2.setText("Total: Rs." + total);
+                totalFrag2.setText("Total: Rs." + (b+i));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Mintchoco");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -106,9 +109,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.mango_scoop);
-                total+=70;
+                i=70;
                 textview6.setText("Mango");
-                totalFrag2.setText("Total: Rs." + total);
+                totalFrag2.setText("Total: Rs." + (b+i));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Mango");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -118,9 +121,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.strawberry_scoop);
-                total+=60;
+                i=60;
                 textview6.setText("Strawberry");
-                totalFrag2.setText("Total: Rs." + total);
+                totalFrag2.setText("Total: Rs." + (b+i));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Strawberry");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -131,9 +134,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.blueberry_scoop);
-                total+=80;
+                i=80;
                 textview6.setText("Blueberry");
-                totalFrag2.setText("Total: Rs." + total);
+                totalFrag2.setText("Total: Rs." + (b+i));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Blueberry");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -144,9 +147,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.chocolate_scoop);
-                total+=70;
+                i=70;
                 textview6.setText("Chocolate");
-                totalFrag2.setText("Total: Rs." + total);
+                totalFrag2.setText("Total: Rs." + (b+i));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Chocolate");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -157,9 +160,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.vanilla_scoop);
-                total+=50;
+                i=50;
                 textview6.setText("Vanilla");
-                totalFrag2.setText("Total: Rs." + total);
+                totalFrag2.setText("Total: Rs." + (b+i));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Vanilla");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);

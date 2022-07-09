@@ -81,7 +81,7 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         ZXDecoder decoder = new ZXDecoder();
-        decoder.setScanAreaPercent(0.8);
+        decoder.setScanAreaPercent(0.9);
         camera.setDecoder(decoder);
         camera.startScanner();
     }

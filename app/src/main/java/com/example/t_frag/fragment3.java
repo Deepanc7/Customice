@@ -20,7 +20,7 @@ import androidx.fragment.app.FragmentResultListener;
 public class fragment3 extends Fragment {
 
     Button next_btn;
-    int total3=0;
+    int total3=0,j=0;
     String a,b,c,d="";
     @Nullable
     @Override
@@ -113,23 +113,14 @@ public class fragment3 extends Fragment {
         TextView textview3 = view.findViewById(R.id.textView3);
         ImageView toppings = (ImageView) view.findViewById(R.id.topping_img);
 
-        notopping.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                toppings.setImageResource(R.drawable.empty);
-                textview3.setText("Total: Rs."+total3);
-                total3+=0;
-                a="No topping";
-            }
 
-        });
 
         chocolatetopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.chocolate_topping);
-                textview3.setText("Total: Rs."+total3);
-                total3+=36;
+                j=36;
+                textview3.setText("Total: Rs."+(total3+j));
                 a="Chocolate Sauce";
             }
 
@@ -139,8 +130,8 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.strawberry_topping);
-                textview3.setText("Total: Rs."+total3);
-                total3+=36;
+                j=36;
+                textview3.setText("Total: Rs."+(total3+j));
                 a="Strawberry Sauce";
             }
 
@@ -149,8 +140,8 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.caramel_topping);
-                textview3.setText("Total: Rs."+total3);
-                total3+=49;
+                j=49;
+                textview3.setText("Total: Rs."+(total3+j));
                 a="Caramel sauce";
             }
 
@@ -159,8 +150,8 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.coconut_topping);
-                textview3.setText("Total: Rs."+total3);
-                total3+=33;
+                j=33;
+                textview3.setText("Total: Rs."+(total3+j));
                 a="Coconut Shavings";
             }
 
@@ -169,8 +160,8 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.sprinkles_topping);
-                textview3.setText("Total: Rs."+total3);
-                total3+=29;
+                j=29;
+                textview3.setText("Total: Rs."+(total3+j));
                 a="Sprinkled";
             }
 
@@ -180,10 +171,20 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.choco_chip_topping);
-                textview3.setText("Total: Rs."+total3);
-                total3+=55;
+                j=55;
+                textview3.setText("Total: Rs."+(total3+j));
                 a="Choco chip";
             }
+        });
+
+        notopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toppings.setImageResource(R.drawable.empty);
+                textview3.setText("Total: Rs."+(total3));
+                a="No topping";
+            }
+
         });
         Button button = (Button) view.findViewById(R.id.next_button);
 
@@ -194,7 +195,7 @@ public class fragment3 extends Fragment {
                 SharedPreferences.Editor editor = pref.edit();
                 d=a+" "+b+" "+c;
                 editor.putString("icecream", d);
-                editor.putInt("total", total3);
+                editor.putInt("total", (total3+j));
                 editor.commit();
                 Intent intent = new Intent(getActivity(), Store.class);
                 startActivity(intent);
