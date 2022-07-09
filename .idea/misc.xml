@@ -3,33 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/activity_bill.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/activity_delivery.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/activity_main2.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/activity_main3.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/activity_picture_code.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/activity_scanned_barcode.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/activity_store.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/activity_store2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/fragment3.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/fragment_fragment1.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/fragment_fragment2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Deepa N C/AndroidStudioProjects/TFrag/app/src/main/res/layout/round_edges.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Tushar/Documents/repos/T-Frag/app/src/main/res/layout/activity_bill.xml" value="0.259375" />
         <entry key="..\:/Users/Tushar/Documents/repos/T-Frag/app/src/main/res/layout/activity_delivery.xml" value="0.264" />
         <entry key="..\:/Users/Tushar/Documents/repos/T-Frag/app/src/main/res/layout/fragment3.xml" value="0.2" />
         <entry key="..\:/Users/Tushar/Documents/repos/T-Frag/app/src/main/res/layout/fragment_fragment2.xml" value="0.29112271540469975" />
+        <entry key="..\:/Users/Tushar/Documents/repos/T-Frag/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.127" />
         <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1435" />
         <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/layout-v31/fragment_fragment1.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/layout/activity_frag.xml" value="0.25" />
         <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/layout/activity_main2.xml" value="0.25" />
-        <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/layout/fragment3.xml" value="0.25" />
+        <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/layout/fragment3.xml" value="0.264" />
         <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/layout/fragment_fragment1.xml" value="0.25" />
-        <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/layout/fragment_fragment2.xml" value="0.12048192771084337" />
+        <entry key="..\:/Users/anann/Desktop/dsatmmad/T-Frag/app/src/main/res/layout/fragment_fragment2.xml" value="0.264" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -105,15 +105,60 @@ public class fragment3 extends Fragment {
         });
         ImageButton sprinkle_btn = (ImageButton) view.findViewById(R.id.sprinkle_img_btn);
         ImageButton choco_chip_btn = (ImageButton) view.findViewById(R.id.choco_chip_img_btn);
+        ImageButton cherrywhip = (ImageButton) view.findViewById(R.id.cherry_plus_whipping_cream);
+        ImageButton caramel = (ImageButton) view.findViewById(R.id.caramel);
+        ImageButton strawberrytopping = (ImageButton) view.findViewById(R.id.strawberry);
+        ImageButton chocolatetopping = (ImageButton) view.findViewById(R.id.chocolate);
+
         textview3 = view.findViewById(R.id.textView3);
         //TextView textview12 = view.findViewById(R.id.textView12);
         ImageView toppings = (ImageView) view.findViewById(R.id.topping_img);
 
+        chocolatetopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toppings.setImageResource(R.drawable.chocolate_topping);
+                textview3.setText("Chocolate Sauce");
+                total3+=39;
+                a="Chocolate Sauce";
+            }
+
+        });
+        strawberrytopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toppings.setImageResource(R.drawable.strawberry_topping);
+                textview3.setText("Strawberry Sauce");
+                total3+=39;
+                a="Strawberry Sauce";
+            }
+
+        });
+        caramel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toppings.setImageResource(R.drawable.caramel_topping);
+                textview3.setText("Caramel sauce");
+                total3+=39;
+                a="Caramel sauce";
+            }
+
+        });
+        cherrywhip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toppings.setImageResource(R.drawable.coconut_topping);
+                textview3.setText("Cherry and whipped cream");
+                total3+=89;
+                a="Cherrywhip";
+            }
+
+        });
         sprinkle_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toppings.setImageResource(R.drawable.sprinkles);
-                textview3.setText("Topping: Sprinkles");
+                toppings.setImageResource(R.drawable.sprinkles_topping);
+                textview3.setText("Sprinkles");
                 total3+=39;
                 a="Sprinkled";
             }
@@ -123,8 +168,8 @@ public class fragment3 extends Fragment {
         choco_chip_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                toppings.setImageResource(R.drawable.choco_chip);
-                textview3.setText("Topping: Choco Chips");
+                toppings.setImageResource(R.drawable.choco_chip_topping);
+                textview3.setText("Choco Chips");
                 total3+=79;
                 a="Choco chip";
             }

@@ -17,54 +17,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.783" />
-
-    <ImageButton
-        android:id="@+id/sprinkle_img_btn"
-        android:layout_width="219dp"
-        android:layout_height="196dp"
-        android:background="@color/white"
-        android:contentDescription="sprinkles"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08"
-        app:srcCompat="@drawable/sprinkles" />
-
-    <ImageButton
-        android:id="@+id/choco_chip_img_btn"
-        android:contentDescription="choco chip"
-        android:layout_width="211dp"
-        android:layout_height="222dp"
-        android:background="@color/white"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06"
-        app:srcCompat="@drawable/choco_chip" />
+        app:layout_constraintVertical_bias="0.976" />
 
 
     <ImageView
@@ -73,10 +29,10 @@
         android:layout_height="204dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.633"
+        app:layout_constraintVertical_bias="0.275"
         app:srcCompat="@drawable/cone_plain" />
 
     <ImageView
@@ -85,56 +41,123 @@
         android:layout_height="170dp"
         app:layout_constraintBottom_toBottomOf="@+id/typeimg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.557"
-        app:srcCompat="@drawable/blueberry_scoop" />
+        app:layout_constraintVertical_bias="0.089" />
 
     <ImageView
         android:id="@+id/topping_img"
-        android:layout_width="207dp"
-        android:layout_height="218dp"
+        android:layout_width="129dp"
+        android:layout_height="108dp"
         app:layout_constraintBottom_toBottomOf="@+id/typeimg"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/choco_chip" />
+        app:layout_constraintVertical_bias="0.103" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rs. 39"
-        app:layout_constraintBottom_toBottomOf="@+id/sprinkle_img_btn"
-        app:layout_constraintEnd_toStartOf="@+id/choco_chip_img_btn"
-        app:layout_constraintHorizontal_bias="0.591"
-        app:layout_constraintStart_toStartOf="@+id/sprinkle_img_btn"
-        app:layout_constraintTop_toTopOf="@+id/sprinkle_img_btn"
-        app:layout_constraintVertical_bias="0.564" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rs. 79"
-        app:layout_constraintBottom_toBottomOf="@+id/choco_chip_img_btn"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="@+id/choco_chip_img_btn"
-        app:layout_constraintTop_toTopOf="@+id/choco_chip_img_btn"
-        app:layout_constraintVertical_bias="0.551" />
-
-    <TextView
-        android:id="@+id/priceDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/next_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topping_img"
-        app:layout_constraintVertical_bias="0.248" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <ImageButton
+        android:id="@+id/sprinkle_img_btn"
+        android:layout_width="89dp"
+        android:layout_height="99dp"
+        android:background="@color/white"
+        android:contentDescription="sprinkles"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/choco_chip_img_btn"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661"
+        app:srcCompat="@drawable/sprinkles_topping" />
+
+    <ImageButton
+        android:id="@+id/choco_chip_img_btn"
+        android:layout_width="98dp"
+        android:layout_height="97dp"
+        android:background="@color/white"
+        android:contentDescription="choco chip"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.659"
+        app:srcCompat="@drawable/choco_chip_topping" />
+
+    <ImageButton
+        android:id="@+id/cherry_plus_whipping_cream"
+        android:layout_width="99dp"
+        android:layout_height="92dp"
+        android:background="@color/white"
+        android:contentDescription="cherry_plus_whipping_cream"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintStart_toEndOf="@+id/choco_chip_img_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.677"
+        app:srcCompat="@drawable/coconut_topping" />
+
+    <ImageButton
+        android:id="@+id/caramel"
+        android:layout_width="88dp"
+        android:layout_height="91dp"
+        android:contentDescription="caramel topping"
+        android:background="@color/white"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sprinkle_img_btn"
+        app:layout_constraintVertical_bias="0.243"
+        app:srcCompat="@drawable/caramel_topping" />
+
+    <ImageButton
+        android:id="@+id/strawberry"
+        android:layout_width="88dp"
+        android:layout_height="91dp"
+        android:background="@color/white"
+        android:contentDescription="strawberry topping"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choco_chip_img_btn"
+        app:layout_constraintVertical_bias="0.256"
+        app:srcCompat="@drawable/strawberry_topping" />
+
+    <ImageButton
+        android:id="@+id/chocolate"
+        android:layout_width="88dp"
+        android:layout_height="91dp"
+        android:contentDescription="chocolate topping"
+        android:background="@color/white"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cherry_plus_whipping_cream"
+        app:layout_constraintVertical_bias="0.191"
+        app:srcCompat="@drawable/chocolate_topping" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
