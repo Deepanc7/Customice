@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
     <Button
         android:id="@+id/next_button"
@@ -56,19 +55,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.103" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
 
     <ImageButton
         android:id="@+id/sprinkle_img_btn"
@@ -238,16 +224,16 @@
 
     <ImageButton
         android:id="@+id/no_topping"
-        android:layout_width="172dp"
-        android:layout_height="37dp"
+        android:layout_width="169dp"
+        android:layout_height="40dp"
         android:background="@android:color/holo_orange_light"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533"
+        app:layout_constraintVertical_bias="0.527"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
@@ -259,8 +245,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/no_topping"
         app:layout_constraintEnd_toEndOf="@+id/no_topping"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="@+id/no_topping"
-        app:layout_constraintTop_toTopOf="@+id/no_topping" />
+        app:layout_constraintTop_toTopOf="@+id/no_topping"
+        app:layout_constraintVertical_bias="0.466" />
 
     <TextView
         android:id="@+id/textView41"

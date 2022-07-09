@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/store_background"
     tools:context=".StoreActivity">
 
     <Button
@@ -11,7 +12,7 @@
         android:layout_width="112dp"
         android:layout_height="56dp"
         android:background="@android:color/holo_orange_light"
-        android:fontFamily="@font/barriecito"
+        android:fontFamily="@font/fredoka_one"
         android:onClick="buttonClick"
         android:text="NEXT"
         android:textSize="24sp"
@@ -22,33 +23,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.906" />
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background"
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="312dp"
+        android:layout_height="466dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"></pl.droidsonroids.gif.GifImageView>
+        app:layout_constraintVertical_bias="0.264" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="215dp"
         android:layout_height="53dp"
-        android:fontFamily="@font/covered_by_your_grace"
+        android:fontFamily="@font/fredoka_one"
         android:text="Select Store"
-        android:textAlignment="center"
+        android:textAlignment="viewStart"
         android:textColor="#62216E"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
+        app:layout_constraintVertical_bias="0.471" />
 
     <Spinner
         android:id="@+id/dynamic_spinner3"
@@ -61,7 +62,8 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567" />
+        app:layout_constraintVertical_bias="0.567"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/dynamic_spinner4"
@@ -74,21 +76,23 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.294" />
+        app:layout_constraintVertical_bias="0.294"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="157dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/covered_by_your_grace"
+        android:layout_width="230dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/fredoka_one"
         android:text="Select City"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="#62216E"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.314"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.202" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
