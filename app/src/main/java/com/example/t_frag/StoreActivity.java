@@ -79,5 +79,6 @@ public class StoreActivity extends AppCompatActivity {
                 startActivity(it);
             }
         });
+
     }
 }

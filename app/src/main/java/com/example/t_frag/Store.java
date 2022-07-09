@@ -1,6 +1,7 @@
 package com.example.t_frag;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +18,7 @@ public class Store extends AppCompatActivity {
     private Spinner dynamicSpinner1;
     private Spinner dynamicSpinner2;
     TextView rcv;
-    String c;
+    String c,b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class Store extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 Log.v("item", (String) parent.getItemAtPosition(position));
+                b = parent.getItemAtPosition(position).toString();
 
             }
 
@@ -69,16 +71,20 @@ public class Store extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
         });
+
         Button button = (Button) findViewById(R.id.next_button2);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(c=="Home Delivery") {
+                int b1=Integer.parseInt(b);
+                SharedPreferences pref = getSharedPreferences("preferences", 0);
+                SharedPreferences.Editor editor = pref.edit();
+                editor.putInt("quantity", b1);
+                editor.commit();
+                if (c == "Home Delivery") {
                     Intent intent = new Intent(Store.this, Delivery.class);
                     startActivity(intent);
-                }
-                else
-                {
+                } else {
                     Intent intent = new Intent(Store.this, MainActivity3.class);
                     startActivity(intent);
                 }
