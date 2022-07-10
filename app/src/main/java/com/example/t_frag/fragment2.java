@@ -30,13 +30,13 @@ public class fragment2 extends Fragment {
 
         getParentFragmentManager().setFragmentResultListener("requestKey", this, new FragmentResultListener() {
             @Override
-            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+            public void onFragmentResult(@NonNull String requestKeyBase, @NonNull Bundle bundle) {
                 // We use a String here, but any type that can be put in a Bundle is supported
                 ImageView typeImg = (ImageView)view.findViewById(R.id.imageView3);
 
-                result = bundle.getString("bundleKey");
+                result = bundle.getString("bundleKeyBase");
 
-                if(result=="2") {
+                if(result=="cone") {
                     b=60;
                     typeImg.setImageResource(R.drawable.cone_plain);
                 }

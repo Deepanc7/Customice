@@ -17,9 +17,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <ImageButton
         android:id="@+id/cone_button"
@@ -34,22 +35,23 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/icecream_type"
-        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintVertical_bias="0.14"
         app:srcCompat="@drawable/icecream_cone" />
 
     <ImageButton
         android:id="@+id/cup_button"
-        android:layout_width="382dp"
-        android:layout_height="260dp"
+        android:layout_width="376dp"
+        android:layout_height="244dp"
         android:adjustViewBounds="true"
         android:background="@color/purple_200"
         android:contentDescription="Cup"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867"
+        app:layout_constraintVertical_bias="0.749"
         app:srcCompat="@drawable/icecream_cup" />
 
     <TextView
@@ -62,14 +64,15 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.492" />
+        app:layout_constraintVertical_bias="0.467" />
 
     <TextView
         android:id="@+id/textView30"
-        android:layout_width="49dp"
-        android:layout_height="27dp"
+        android:layout_width="54dp"
+        android:layout_height="37dp"
         android:fontFamily="@font/fredoka_one"
         android:text="Rs. 30"
         android:textColor="@color/white"
@@ -79,7 +82,22 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
+        app:layout_constraintVertical_bias="0.891" />
+
+    <TextView
+        android:id="@+id/selectDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredoka_one"
+        android:text="Ice-Cream Cone"
+        android:textColor="#FFFDFD"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
 
     <!--    <com.google.android.material.textfield.TextInputLayout-->
     <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"-->

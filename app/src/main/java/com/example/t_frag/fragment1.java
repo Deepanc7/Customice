@@ -29,25 +29,28 @@ public class fragment1 extends Fragment {
 
 
         TextView textview4 = view.findViewById(R.id.icecream_type);
+        TextView selectDisplay = view.findViewById(R.id.selectDisplay);
 
         simpleImageButtonCup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textview4.setText("Ice-Cream Cup");
-                String ch="1";
+                selectDisplay.setText("Ice-Cream Cup");
+                //String ch="1";
+                //1 == cup 2 == cone
                 Bundle result = new Bundle();
+                //bundleKey == bundleKeyBase
 
-                result.putString("bundleKey", "1");
-                getParentFragmentManager().setFragmentResult("requestKey", result);
+                result.putString("bundleKeyBase", "cup");
+                getParentFragmentManager().setFragmentResult("requestKeyBase", result);
             }
         });
         simpleImageButtonCandy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textview4.setText("Ice-Cream Cone");
+                selectDisplay.setText("Ice-Cream Cone");
                 Bundle result = new Bundle();
-                result.putString("bundleKey", "2");
-                getParentFragmentManager().setFragmentResult("requestKey", result);
+                result.putString("bundleKeyBase", "cone");
+                getParentFragmentManager().setFragmentResult("requestKeyBase", result);
             }
         });
 

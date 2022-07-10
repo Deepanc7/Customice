@@ -21,10 +21,13 @@ public class fragment3 extends Fragment {
 
     Button next_btn;
     int total3=0,j=0;
+    int defaultVal = 0;
     String d="";
     String b = " vanilla";
     String a = " ";
     String c= " cone";
+    String resultFlavour;
+    String result1;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -38,9 +41,9 @@ public class fragment3 extends Fragment {
 
         getParentFragmentManager().setFragmentResultListener("requestKeyFlavour", this, new FragmentResultListener() {
             @Override
-            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+            public void onFragmentResult(@NonNull String requestKeyBase, @NonNull Bundle bundle) {
                 ImageView FlavourImg = (ImageView) view.findViewById(R.id.flavour_img);
-                String resultFlavour = bundle.getString("bundleKeyFlavour");
+                resultFlavour = bundle.getString("bundleKeyFlavour");
 
                 switch (resultFlavour) {
 
@@ -92,13 +95,14 @@ public class fragment3 extends Fragment {
             }
         });
 
+
         getParentFragmentManager().setFragmentResultListener("requestKeyType", this, new FragmentResultListener() {
             @Override
             public void onFragmentResult(@NonNull String requestKeyType, @NonNull Bundle bundle) {
                 // We use a String here, but any type that can be put in a Bundle is supported
                 ImageView typeImg = (ImageView) view.findViewById(R.id.typeimg);
                 //String result1 = "2";
-                String result1 = bundle.getString("bundleKeyType");
+                result1 = bundle.getString("bundleKeyType");
                 if (result1 == null) {
                     result1 = "2";
                 }
@@ -116,6 +120,13 @@ public class fragment3 extends Fragment {
                 }
             }
         });
+        //if (result1 == null) {
+
+           // total3 += 60;
+        //}
+        //if (resultFlavour == null) {
+          //  total3 += 50;
+        //}
         ImageButton sprinkle_btn = (ImageButton) view.findViewById(R.id.sprinkle_img_btn);
         ImageButton choco_chip_btn = (ImageButton) view.findViewById(R.id.choco_chip_img_btn);
         ImageButton coconut = (ImageButton) view.findViewById(R.id.cherry_plus_whipping_cream);
