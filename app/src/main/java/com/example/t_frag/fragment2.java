@@ -15,8 +15,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
 
 public class fragment2 extends Fragment {
-    int total =0,i=0,b=0;
-    String result;
+    int total =0,i=50,b=60;
+    String result = "2";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

@@ -21,7 +21,10 @@ public class fragment3 extends Fragment {
 
     Button next_btn;
     int total3=0,j=0;
-    String a,b,c,d="";
+    String d="";
+    String b = " vanilla";
+    String a = " ";
+    String c= " cone";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -40,6 +43,7 @@ public class fragment3 extends Fragment {
                 String resultFlavour = bundle.getString("bundleKeyFlavour");
 
                 switch (resultFlavour) {
+
                     case "Strawberry":
                         FlavourImg.setImageResource(R.drawable.strawberry_scoop);
                         total3+=60;
@@ -63,6 +67,7 @@ public class fragment3 extends Fragment {
                     case "Mango":
                         FlavourImg.setImageResource(R.drawable.mango_scoop);
                         total3+=70;
+                        b=" mango";
                         break;
                     case "Bluemoon":
                         FlavourImg.setImageResource(R.drawable.bluemoon_scoop);
@@ -79,6 +84,10 @@ public class fragment3 extends Fragment {
                         b="mintchoco";
                         total3+=90;
                         break;
+                    default:
+                        total3+=50;
+                        break;
+
                 }
             }
         });
@@ -88,14 +97,19 @@ public class fragment3 extends Fragment {
             public void onFragmentResult(@NonNull String requestKeyType, @NonNull Bundle bundle) {
                 // We use a String here, but any type that can be put in a Bundle is supported
                 ImageView typeImg = (ImageView) view.findViewById(R.id.typeimg);
-
+                //String result1 = "2";
                 String result1 = bundle.getString("bundleKeyType");
+                if (result1 == null) {
+                    result1 = "2";
+                }
+
 
                 if (result1 == "2") {
                     typeImg.setImageResource(R.drawable.cone_plain);
+
                     total3+=60;
                     c=" cone";
-                } else {
+                } else if(result1 == "1"){
                     typeImg.setImageResource(R.drawable.cup_plain);
                     total3+=30;
                     c=" cup";
@@ -182,7 +196,7 @@ public class fragment3 extends Fragment {
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.empty);
                 textview3.setText("Total: Rs."+(total3));
-                a="No topping";
+                a=" ";
             }
 
         });
