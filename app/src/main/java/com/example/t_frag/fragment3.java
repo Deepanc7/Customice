@@ -96,13 +96,13 @@ public class fragment3 extends Fragment {
         });
 
 
-        getParentFragmentManager().setFragmentResultListener("requestKeyBase", this, new FragmentResultListener() {
+        getParentFragmentManager().setFragmentResultListener("requestKeyType", this, new FragmentResultListener() {
             @Override
-            public void onFragmentResult(@NonNull String requestKeyBase, @NonNull Bundle bundle) {
+            public void onFragmentResult(@NonNull String requestKeyType, @NonNull Bundle bundle) {
                 // We use topping String here, but any type that can be put in topping Bundle is supported
                 ImageView typeImg = (ImageView) view.findViewById(R.id.typeimg);
 
-                String baseResult = bundle.getString("bundleKeyBase");
+                String baseResult = bundle.getString("bundleKeyType");
 
 
                 if (baseResult == "cone") {

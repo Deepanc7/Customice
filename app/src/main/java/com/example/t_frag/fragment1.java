@@ -27,18 +27,12 @@ public class fragment1 extends Fragment {
         ImageButton simpleImageButtonCandy = (ImageButton)view.findViewById(R.id.cone_button);
         //TextView textview4 = view.findViewById(R.id.icecream_type);
         TextView selectDisplay = view.findViewById(R.id.selectDisplay);
-        Bundle result = new Bundle();
-        //result.putString("bundleKeyBase", "cone");
-        //getParentFragmentManager().setFragmentResult("requestKeyBase", result);
         simpleImageButtonCup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 selectDisplay.setText("Ice-Cream Cup");
-                //String ch="1";
-                //1 == cup 2 == cone
-                //Bundle result = new Bundle();
-                //bundleKey == bundleKeyBase
 
+                Bundle result = new Bundle();
                 result.putString("bundleKeyBase", "cup");
                 getParentFragmentManager().setFragmentResult("requestKeyBase", result);
             }
@@ -47,7 +41,7 @@ public class fragment1 extends Fragment {
             @Override
             public void onClick(View v) {
                 selectDisplay.setText("Ice-Cream Cone");
-                //Bundle result = new Bundle();
+                Bundle result = new Bundle();
                 result.putString("bundleKeyBase", "cone");
                 getParentFragmentManager().setFragmentResult("requestKeyBase", result);
             }

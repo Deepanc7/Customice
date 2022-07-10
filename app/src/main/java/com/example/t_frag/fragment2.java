@@ -16,7 +16,7 @@ import androidx.fragment.app.FragmentResultListener;
 
 public class fragment2 extends Fragment {
     int total =0, flavorPrice =50, basePrice =60;
-    String result = "2";
+    //String result = "2";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -33,23 +33,22 @@ public class fragment2 extends Fragment {
             public void onFragmentResult(@NonNull String requestKeyBase, @NonNull Bundle bundle) {
                 // We use topping String here, but any type that can be put in topping Bundle is supported
                 ImageView typeImg = (ImageView)view.findViewById(R.id.imageView3);
-                Bundle bundleIntegrated = getArguments();
 
-                result = bundle.getString("bundleKeyBase");
+                String baseType = bundle.getString("bundleKeyBase");
 
-                if(result=="cone") {
-                    basePrice =60;
+                if(baseType == "cone") {
                     typeImg.setImageResource(R.drawable.cone_plain);
+                    basePrice =60;
                 }
                 else
                 {
-                    basePrice =30;
                     typeImg.setImageResource(R.drawable.cup_plain);
+                    basePrice =30;
                 }
+                Bundle result1 = new Bundle();
+                result1.putString("bundleKeyType", baseType);
+                getParentFragmentManager().setFragmentResult("requestKeyType", result1);
 
-                //Bundle result1 = new Bundle();
-                //result1.putString("bundleKeyType", result);
-                //getParentFragmentManager().setFragmentResult("requestKeyType", result1);
 
             }
         });
