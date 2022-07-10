@@ -17,7 +17,7 @@ public class BillActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
 
-        Bundle bundle=getIntent().getBundleExtra("a");
+        Bundle bundle=getIntent().getBundleExtra("topping");
         a=bundle.getString("data");
         b=bundle.getString("data1");
         add=bundle.getString("data2");

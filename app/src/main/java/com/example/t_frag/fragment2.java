@@ -31,8 +31,9 @@ public class fragment2 extends Fragment {
         getParentFragmentManager().setFragmentResultListener("requestKeyBase", this, new FragmentResultListener() {
             @Override
             public void onFragmentResult(@NonNull String requestKeyBase, @NonNull Bundle bundle) {
-                // We use a String here, but any type that can be put in a Bundle is supported
+                // We use topping String here, but any type that can be put in topping Bundle is supported
                 ImageView typeImg = (ImageView)view.findViewById(R.id.imageView3);
+                Bundle bundleIntegrated = getArguments();
 
                 result = bundle.getString("bundleKeyBase");
 
@@ -46,9 +47,9 @@ public class fragment2 extends Fragment {
                     typeImg.setImageResource(R.drawable.cup_plain);
                 }
 
-                Bundle result1 = new Bundle();
-                result1.putString("bundleKeyType", result);
-                getParentFragmentManager().setFragmentResult("requestKeyType", result1);
+                //Bundle result1 = new Bundle();
+                //result1.putString("bundleKeyType", result);
+                //getParentFragmentManager().setFragmentResult("requestKeyType", result1);
 
             }
         });

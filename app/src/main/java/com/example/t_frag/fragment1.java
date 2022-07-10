@@ -19,20 +19,17 @@ public class fragment1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fragment1, container, false);
         return view;
     }
-    //SharedPreferences preferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ImageButton simpleImageButtonCup = (ImageButton)view.findViewById(R.id.cup_button);
         ImageButton simpleImageButtonCandy = (ImageButton)view.findViewById(R.id.cone_button);
-
-
-        TextView textview4 = view.findViewById(R.id.icecream_type);
+        //TextView textview4 = view.findViewById(R.id.icecream_type);
         TextView selectDisplay = view.findViewById(R.id.selectDisplay);
         Bundle result = new Bundle();
-        result.putString("bundleKeyBase", "cone");
-        getParentFragmentManager().setFragmentResult("requestKeyBase", result);
+        //result.putString("bundleKeyBase", "cone");
+        //getParentFragmentManager().setFragmentResult("requestKeyBase", result);
         simpleImageButtonCup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

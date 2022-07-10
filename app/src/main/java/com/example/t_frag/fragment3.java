@@ -20,12 +20,12 @@ import androidx.fragment.app.FragmentResultListener;
 public class fragment3 extends Fragment {
 
     Button next_btn;
-    int total3=0,j=0;
-    int defaultVal = 0;
-    String d="";
-    String b = " vanilla";
-    String a = " ";
-    String c= " cone";
+    int flavorPrice =50, toppingPrice =0, basePrice = 60;
+
+    String iceName ="";
+    String flavor = " vanilla";
+    String topping = " ";
+    String base = " cone";
     String resultFlavour;
     String result1;
     @Nullable
@@ -41,7 +41,7 @@ public class fragment3 extends Fragment {
 
         getParentFragmentManager().setFragmentResultListener("requestKeyFlavour", this, new FragmentResultListener() {
             @Override
-            public void onFragmentResult(@NonNull String requestKeyBase, @NonNull Bundle bundle) {
+            public void onFragmentResult(@NonNull String requestKeyFlavor, @NonNull Bundle bundle) {
                 ImageView FlavourImg = (ImageView) view.findViewById(R.id.flavour_img);
                 resultFlavour = bundle.getString("bundleKeyFlavour");
 
@@ -49,46 +49,46 @@ public class fragment3 extends Fragment {
 
                     case "Strawberry":
                         FlavourImg.setImageResource(R.drawable.strawberry_scoop);
-                        total3+=60;
-                        b=" strawberry";
+                        flavorPrice =60;
+                        flavor =" strawberry";
                         break;
                     case "Blueberry":
                         FlavourImg.setImageResource(R.drawable.blueberry_scoop);
-                        total3+=80;
-                        b=" black current";
+                        flavorPrice =80;
+                        flavor =" black current";
                         break;
                     case "Chocolate":
                         FlavourImg.setImageResource(R.drawable.chocolate_scoop);
-                        total3+=70;
-                        b=" chocolate";
+                        flavorPrice =70;
+                        flavor =" chocolate";
                         break;
                     case "Vanilla":
                         FlavourImg.setImageResource(R.drawable.vanilla_scoop);
-                        total3+=50;
-                        b=" vanilla";
+                        flavorPrice =50;
+                        flavor =" vanilla";
                         break;
                     case "Mango":
                         FlavourImg.setImageResource(R.drawable.mango_scoop);
-                        total3+=70;
-                        b=" mango";
+                        flavorPrice =70;
+                        flavor =" mango";
                         break;
                     case "Bluemoon":
                         FlavourImg.setImageResource(R.drawable.bluemoon_scoop);
-                        total3+=100;
-                        b=" bluemoon";
+                        flavorPrice =100;
+                        flavor =" bluemoon";
                         break;
                     case "Cottoncandy":
                         FlavourImg.setImageResource(R.drawable.cottoncandy_scoop);
-                        b=" cottoncandy";
-                        total3+=110;
+                        flavor =" cottoncandy";
+                        flavorPrice =110;
                         break;
                     case "Mintchoco":
                         FlavourImg.setImageResource(R.drawable.mintchoco_scoop);
-                        b="mintchoco";
-                        total3+=90;
+                        flavor ="mintchoco";
+                        flavorPrice =90;
                         break;
                     default:
-                        total3+=50;
+                        flavorPrice =50;
                         break;
 
                 }
@@ -96,37 +96,28 @@ public class fragment3 extends Fragment {
         });
 
 
-        getParentFragmentManager().setFragmentResultListener("requestKeyType", this, new FragmentResultListener() {
+        getParentFragmentManager().setFragmentResultListener("requestKeyBase", this, new FragmentResultListener() {
             @Override
-            public void onFragmentResult(@NonNull String requestKeyType, @NonNull Bundle bundle) {
-                // We use a String here, but any type that can be put in a Bundle is supported
+            public void onFragmentResult(@NonNull String requestKeyBase, @NonNull Bundle bundle) {
+                // We use topping String here, but any type that can be put in topping Bundle is supported
                 ImageView typeImg = (ImageView) view.findViewById(R.id.typeimg);
-                //String result1 = "2";
-                result1 = bundle.getString("bundleKeyType");
-                if (result1 == null) {
-                    result1 = "2";
-                }
+
+                String baseResult = bundle.getString("bundleKeyBase");
 
 
-                if (result1 == "2") {
+                if (baseResult == "cone") {
                     typeImg.setImageResource(R.drawable.cone_plain);
 
-                    total3+=60;
-                    c=" cone";
-                } else if(result1 == "1"){
+                    basePrice = 60;
+                    base =" cone";
+                } else {
                     typeImg.setImageResource(R.drawable.cup_plain);
-                    total3+=30;
-                    c=" cup";
+                    basePrice = 30;
+                    base =" cup";
                 }
             }
         });
-        //if (result1 == null) {
 
-           // total3 += 60;
-        //}
-        //if (resultFlavour == null) {
-          //  total3 += 50;
-        //}
         ImageButton sprinkle_btn = (ImageButton) view.findViewById(R.id.sprinkle_img_btn);
         ImageButton choco_chip_btn = (ImageButton) view.findViewById(R.id.choco_chip_img_btn);
         ImageButton coconut = (ImageButton) view.findViewById(R.id.cherry_plus_whipping_cream);
@@ -144,9 +135,9 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.chocolate_topping);
-                j=36;
-                textview3.setText("Total: Rs."+(total3+j));
-                a="Chocolate Sauce";
+                toppingPrice =36;
+                textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
+                topping ="Chocolate Sauce";
             }
 
         });
@@ -155,9 +146,9 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.strawberry_topping);
-                j=36;
-                textview3.setText("Total: Rs."+(total3+j));
-                a="Strawberry Sauce";
+                toppingPrice =36;
+                textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
+                topping ="Strawberry Sauce";
             }
 
         });
@@ -165,9 +156,9 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.caramel_topping);
-                j=49;
-                textview3.setText("Total: Rs."+(total3+j));
-                a="Caramel sauce";
+                toppingPrice =49;
+                textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
+                topping ="Caramel sauce";
             }
 
         });
@@ -175,9 +166,9 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.coconut_topping);
-                j=33;
-                textview3.setText("Total: Rs."+(total3+j));
-                a="Coconut Shavings";
+                toppingPrice =33;
+                textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
+                topping ="Coconut Shavings";
             }
 
         });
@@ -185,9 +176,9 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.sprinkles_topping);
-                j=29;
-                textview3.setText("Total: Rs."+(total3+j));
-                a="Sprinkled";
+                toppingPrice =29;
+                textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
+                topping ="Sprinkled";
             }
 
         });
@@ -196,9 +187,9 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.choco_chip_topping);
-                j=55;
-                textview3.setText("Total: Rs."+(total3+j));
-                a="Choco chip";
+                toppingPrice =55;
+                textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
+                topping ="Choco chip";
             }
         });
 
@@ -206,8 +197,8 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.empty);
-                textview3.setText("Total: Rs."+(total3));
-                a=" ";
+                textview3.setText("Total: Rs."+(flavorPrice + basePrice));
+                topping =" ";
             }
 
         });
@@ -218,9 +209,9 @@ public class fragment3 extends Fragment {
 
                 SharedPreferences pref = getActivity().getSharedPreferences("preferences",0);
                 SharedPreferences.Editor editor = pref.edit();
-                d=a+" "+b+" "+c;
-                editor.putString("icecream", d);
-                editor.putInt("total", (total3+j));
+                iceName = topping +" "+ flavor +" "+ base;
+                editor.putString("icecream", iceName);
+                editor.putInt("total", (flavorPrice + toppingPrice + basePrice));
                 editor.commit();
                 Intent intent = new Intent(getActivity(), Store.class);
                 startActivity(intent);

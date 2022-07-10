@@ -80,7 +80,7 @@ public class Delivery extends AppCompatActivity {
                 bundle.putString("data1",b);
                 bundle.putString("data2",e1);
                 Intent it=new Intent(getBaseContext(),BillActivity.class);
-                it.putExtra("a",bundle);
+                it.putExtra("topping",bundle);
                 startActivity(it);
             }
         });

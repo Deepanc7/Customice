@@ -70,7 +70,7 @@ public class MainActivity3 extends AppCompatActivity {
                 Bundle bundle=new Bundle();
                 bundle.putString("data",data);
                 Intent it=new Intent(getApplicationContext(),BillActivity.class);
-                it.putExtra("a",bundle);
+                it.putExtra("topping",bundle);
                 startActivity(it);
             }
         });

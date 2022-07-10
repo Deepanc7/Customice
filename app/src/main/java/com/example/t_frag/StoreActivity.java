@@ -75,7 +75,7 @@ public class StoreActivity extends AppCompatActivity {
                 bundle.putString("data",data);
                 bundle.putString("data1", data1);
                 Intent it=new Intent(getApplicationContext(),BillActivity.class);
-                it.putExtra("a",bundle);
+                it.putExtra("topping",bundle);
                 startActivity(it);
             }
         });
