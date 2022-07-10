@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
 
 public class fragment2 extends Fragment {
-    int total =0,i=50,b=60;
+    int total =0, flavorPrice =50, basePrice =60;
     String result = "2";
     @Nullable
     @Override
@@ -28,7 +28,7 @@ public class fragment2 extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        getParentFragmentManager().setFragmentResultListener("requestKey", this, new FragmentResultListener() {
+        getParentFragmentManager().setFragmentResultListener("requestKeyBase", this, new FragmentResultListener() {
             @Override
             public void onFragmentResult(@NonNull String requestKeyBase, @NonNull Bundle bundle) {
                 // We use a String here, but any type that can be put in a Bundle is supported
@@ -37,12 +37,12 @@ public class fragment2 extends Fragment {
                 result = bundle.getString("bundleKeyBase");
 
                 if(result=="cone") {
-                    b=60;
+                    basePrice =60;
                     typeImg.setImageResource(R.drawable.cone_plain);
                 }
                 else
                 {
-                    b=30;
+                    basePrice =30;
                     typeImg.setImageResource(R.drawable.cup_plain);
                 }
 
@@ -72,10 +72,10 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.cottoncandy_scoop);
-                i=110;
+                flavorPrice =110;
 
                 textview6.setText("Cotton Candy");
-                totalFrag2.setText("Total: Rs." + (b+i));
+                totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Cottoncandy");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -85,9 +85,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.bluemoon_scoop);
-                i=100;
+                flavorPrice =100;
                 textview6.setText("Bluemoon");
-                totalFrag2.setText("Total: Rs." + (b+i));
+                totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Bluemoon");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -97,9 +97,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.mintchoco_scoop);
-                i=90;
+                flavorPrice =90;
                 textview6.setText("Mint Choco-Chip");
-                totalFrag2.setText("Total: Rs." + (b+i));
+                totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Mintchoco");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -109,9 +109,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.mango_scoop);
-                i=70;
+                flavorPrice =70;
                 textview6.setText("Mango");
-                totalFrag2.setText("Total: Rs." + (b+i));
+                totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Mango");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -121,9 +121,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.strawberry_scoop);
-                i=60;
+                flavorPrice =60;
                 textview6.setText("Strawberry");
-                totalFrag2.setText("Total: Rs." + (b+i));
+                totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Strawberry");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -134,9 +134,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.blueberry_scoop);
-                i=80;
+                flavorPrice =80;
                 textview6.setText("Blueberry");
-                totalFrag2.setText("Total: Rs." + (b+i));
+                totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Blueberry");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -147,9 +147,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.chocolate_scoop);
-                i=70;
+                flavorPrice =70;
                 textview6.setText("Chocolate");
-                totalFrag2.setText("Total: Rs." + (b+i));
+                totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Chocolate");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
@@ -160,9 +160,9 @@ public class fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 scoop_view.setImageResource(R.drawable.vanilla_scoop);
-                i=50;
+                flavorPrice =50;
                 textview6.setText("Vanilla");
-                totalFrag2.setText("Total: Rs." + (b+i));
+                totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Vanilla");
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
