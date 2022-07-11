@@ -44,6 +44,7 @@ public class fragment3 extends Fragment {
             public void onFragmentResult(@NonNull String requestKeyFlavor, @NonNull Bundle bundle) {
                 ImageView FlavourImg = (ImageView) view.findViewById(R.id.flavour_img);
                 resultFlavour = bundle.getString("bundleKeyFlavour");
+                TextView textview3 = view.findViewById(R.id.textView3);
 
                 switch (resultFlavour) {
 
@@ -51,44 +52,55 @@ public class fragment3 extends Fragment {
                         FlavourImg.setImageResource(R.drawable.strawberry_scoop);
                         flavorPrice =60;
                         flavor =" strawberry";
+
+                        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                         break;
                     case "Blueberry":
                         FlavourImg.setImageResource(R.drawable.blueberry_scoop);
                         flavorPrice =80;
                         flavor =" black current";
+
+                        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                         break;
                     case "Chocolate":
                         FlavourImg.setImageResource(R.drawable.chocolate_scoop);
                         flavorPrice =70;
                         flavor =" chocolate";
+                        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                         break;
                     case "Vanilla":
                         FlavourImg.setImageResource(R.drawable.vanilla_scoop);
                         flavorPrice =50;
                         flavor =" vanilla";
+                        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                         break;
                     case "Mango":
                         FlavourImg.setImageResource(R.drawable.mango_scoop);
                         flavorPrice =70;
                         flavor =" mango";
+                        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                         break;
                     case "Bluemoon":
                         FlavourImg.setImageResource(R.drawable.bluemoon_scoop);
                         flavorPrice =100;
                         flavor =" bluemoon";
+                        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                         break;
                     case "Cottoncandy":
                         FlavourImg.setImageResource(R.drawable.cottoncandy_scoop);
                         flavor =" cottoncandy";
                         flavorPrice =110;
+                        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                         break;
                     case "Mintchoco":
                         FlavourImg.setImageResource(R.drawable.mintchoco_scoop);
                         flavor ="mintchoco";
                         flavorPrice =90;
+                        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                         break;
                     default:
                         flavorPrice =50;
+                        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                         break;
 
                 }
@@ -109,10 +121,14 @@ public class fragment3 extends Fragment {
                     typeImg.setImageResource(R.drawable.cone_plain);
 
                     basePrice = 60;
+                    TextView textview3 = view.findViewById(R.id.textView3);
+                    textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                     base =" cone";
                 } else {
                     typeImg.setImageResource(R.drawable.cup_plain);
                     basePrice = 30;
+                    TextView textview3 = view.findViewById(R.id.textView3);
+                    textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                     base =" cup";
                 }
             }
@@ -127,6 +143,8 @@ public class fragment3 extends Fragment {
         ImageButton notopping = (ImageButton) view.findViewById(R.id.no_topping);
 
         TextView textview3 = view.findViewById(R.id.textView3);
+        textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
+        TextView textview5 = view.findViewById(R.id.textView5);
         ImageView toppings = (ImageView) view.findViewById(R.id.topping_img);
 
 
@@ -138,6 +156,7 @@ public class fragment3 extends Fragment {
                 toppingPrice =36;
                 textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                 topping ="Chocolate Sauce";
+                textview5.setText(topping);
             }
 
         });
@@ -149,6 +168,7 @@ public class fragment3 extends Fragment {
                 toppingPrice =36;
                 textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                 topping ="Strawberry Sauce";
+                textview5.setText(topping);
             }
 
         });
@@ -159,6 +179,7 @@ public class fragment3 extends Fragment {
                 toppingPrice =49;
                 textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                 topping ="Caramel sauce";
+                textview5.setText(topping);
             }
 
         });
@@ -169,6 +190,7 @@ public class fragment3 extends Fragment {
                 toppingPrice =33;
                 textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                 topping ="Coconut Shavings";
+                textview5.setText(topping);
             }
 
         });
@@ -179,6 +201,7 @@ public class fragment3 extends Fragment {
                 toppingPrice =29;
                 textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                 topping ="Sprinkled";
+                textview5.setText(topping);
             }
 
         });
@@ -190,6 +213,7 @@ public class fragment3 extends Fragment {
                 toppingPrice =55;
                 textview3.setText("Total: Rs."+(flavorPrice + toppingPrice + basePrice));
                 topping ="Choco chip";
+                textview5.setText(topping);
             }
         });
 
@@ -197,8 +221,10 @@ public class fragment3 extends Fragment {
             @Override
             public void onClick(View v) {
                 toppings.setImageResource(R.drawable.empty);
+                toppingPrice = 0;
                 textview3.setText("Total: Rs."+(flavorPrice + basePrice));
                 topping =" ";
+                textview5.setText("No Topping Selected");
             }
 
         });

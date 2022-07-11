@@ -108,6 +108,7 @@ public class fragment2 extends Fragment {
                 totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Mintchoco");
+                result.putInt("firstTwoPrice", (basePrice + flavorPrice));
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
@@ -120,6 +121,7 @@ public class fragment2 extends Fragment {
                 totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Mango");
+                result.putInt("firstTwoPrice", (basePrice + flavorPrice));
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
@@ -132,6 +134,7 @@ public class fragment2 extends Fragment {
                 totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Strawberry");
+                result.putInt("firstTwoPrice", (basePrice + flavorPrice));
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
@@ -145,6 +148,7 @@ public class fragment2 extends Fragment {
                 totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Blueberry");
+                result.putInt("firstTwoPrice", (basePrice + flavorPrice));
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
@@ -158,6 +162,7 @@ public class fragment2 extends Fragment {
                 totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Chocolate");
+                result.putInt("firstTwoPrice", (basePrice + flavorPrice));
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
@@ -171,6 +176,7 @@ public class fragment2 extends Fragment {
                 totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 Bundle result = new Bundle();
                 result.putString("bundleKeyFlavour", "Vanilla");
+                result.putInt("firstTwoPrice", (basePrice + flavorPrice));
                 getParentFragmentManager().setFragmentResult("requestKeyFlavour", result);
             }
         });
