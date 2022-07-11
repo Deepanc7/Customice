@@ -34,6 +34,7 @@ public class fragment1 extends Fragment {
 
                 Bundle result = new Bundle();
                 result.putString("bundleKeyBase", "cup");
+                result.putInt("basePrice", 30);
                 getParentFragmentManager().setFragmentResult("requestKeyBase", result);
             }
         });
@@ -43,6 +44,7 @@ public class fragment1 extends Fragment {
                 selectDisplay.setText("Ice-Cream Cone");
                 Bundle result = new Bundle();
                 result.putString("bundleKeyBase", "cone");
+                result.putInt("basePrice", 60);
                 getParentFragmentManager().setFragmentResult("requestKeyBase", result);
             }
         });

@@ -38,12 +38,17 @@ public class fragment2 extends Fragment {
 
                 if(baseType == "cone") {
                     typeImg.setImageResource(R.drawable.cone_plain);
+                    TextView totalFrag2 = view.findViewById(R.id.total_price_frag2);
+
                     basePrice =60;
+                    totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 }
                 else
                 {
                     typeImg.setImageResource(R.drawable.cup_plain);
                     basePrice =30;
+                    TextView totalFrag2 = view.findViewById(R.id.total_price_frag2);
+                    totalFrag2.setText("Total: Rs." + (basePrice + flavorPrice));
                 }
                 Bundle result1 = new Bundle();
                 result1.putString("bundleKeyType", baseType);
@@ -56,6 +61,7 @@ public class fragment2 extends Fragment {
         ImageView imgView=(ImageView)view.findViewById(R.id.imageView);
         TextView textview6 = view.findViewById(R.id.total_text_frag2);
         TextView totalFrag2 = view.findViewById(R.id.total_price_frag2);
+        totalFrag2.setText("Total: Rs." + (basePrice + 50));
 
         ImageView scoop_view = (ImageView)view.findViewById(R.id.flavour_img2);
 
