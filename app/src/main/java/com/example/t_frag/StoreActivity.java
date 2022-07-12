@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,7 +16,15 @@ public class StoreActivity extends AppCompatActivity {
 
     private Spinner dynamicSpinner3;
     private Spinner dynamicSpinner4;
-    String data, data1;
+    //String data, data1;
+    String storeSelector, citySelector;
+    String[] items1;
+    String[] items = new String[]{"Bangalore", "Delhi", "Mumbai", "Kolkata"};
+    String[] itemsBangalore = new String[]{"Indiranagar", "Orion Mall", "Kanakapura"};
+    String[] itemsDelhi = new String[]{"Hauz Khas", "Vasant Vihar", "RK Puram"};
+    String[] itemsMumbai = new String[]{"Bandra", "Juhu", "Worli"};
+    String[] itemsKolkata = new String[]{"Jadavpur", "Beniapukur", "NewTown"};
+    ArrayAdapter<String> adapterBangalore, adapterMumbai, adapterDelhi, adapterKolkata;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +32,7 @@ public class StoreActivity extends AppCompatActivity {
 
         dynamicSpinner3 = (Spinner) findViewById(R.id.dynamic_spinner3);
 
-        String[] items = new String[]{"Store 1", "Store 2", "Store 3"};
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, items);
@@ -34,30 +43,54 @@ public class StoreActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
+
                 Log.v("item", (String) parent.getItemAtPosition(position));
-                data1 = (String) parent.getItemAtPosition(position);
+                citySelector =(String)parent.getItemAtPosition(position);
+                if (position == 0) {
+                    items1 = new String[]{"Indiranagar", "Orion Mall", "Kanakapura"};
+
+                    dynamicSpinner4.setAdapter(adapterBangalore);
+                } else if (position == 1) {
+                    items1 = new String[]{"Hauz Khas", "Vasant Vihar", "RK Puram"};
+                    dynamicSpinner4.setAdapter(adapterDelhi);
+                } else if (position == 2) {
+                    items1 = new String[]{"Bandra", "Juhu", "Worli"};
+                    dynamicSpinner4.setAdapter(adapterMumbai);
+                }else {
+                    items1 = new String[]{"Jadavpur", "Beniapukur", "NewTown"};
+                    dynamicSpinner4.setAdapter(adapterKolkata);
+                }
+
+
+
+
             }
 
-            @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 // TODO Auto-generated method stub
             }
         });
         dynamicSpinner4 = (Spinner) findViewById(R.id.dynamic_spinner4);
 
-        String[] items1 = new String[]{"Bangalore", "Mangalore", "Mysore"};
+        adapterBangalore = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, itemsBangalore);
+        adapterDelhi = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, itemsDelhi);
+        adapterMumbai = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, itemsMumbai);
+        adapterKolkata = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, itemsKolkata);
 
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, items1);
 
-        dynamicSpinner4.setAdapter(adapter1);
+        dynamicSpinner4.setAdapter(adapterBangalore);
 
         dynamicSpinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 Log.v("item1", (String) parent.getItemAtPosition(position));
-                data = (String) parent.getItemAtPosition(position);
+                storeSelector =(String)parent.getItemAtPosition(position);
+
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
@@ -65,15 +98,15 @@ public class StoreActivity extends AppCompatActivity {
             }
         });
 
+
         Button button = (Button)findViewById(R.id.next_button4);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Intent intent = new Intent(getBaseContext(), BillActivity.class);
-                //startActivity(intent);
+
                 Bundle bundle=new Bundle();
-                bundle.putString("data",data);
-                bundle.putString("data1", data1);
+                bundle.putString("data", citySelector);
+                bundle.putString("data1", storeSelector);
                 Intent it=new Intent(getApplicationContext(),BillActivity.class);
                 it.putExtra("topping",bundle);
                 startActivity(it);

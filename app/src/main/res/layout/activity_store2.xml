@@ -40,7 +40,7 @@
         android:layout_width="215dp"
         android:layout_height="53dp"
         android:fontFamily="@font/fredoka_one"
-        android:text="Select Store"
+        android:text="Store"
         android:textAlignment="viewStart"
         android:textColor="#62216E"
         android:textSize="34sp"
@@ -49,10 +49,10 @@
         app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471" />
+        app:layout_constraintVertical_bias="0.466" />
 
     <Spinner
-        android:id="@+id/dynamic_spinner3"
+        android:id="@+id/dynamic_spinner4"
         android:layout_width="296dp"
         android:layout_height="52dp"
         android:background="#FAE9FD"
@@ -66,7 +66,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Spinner
-        android:id="@+id/dynamic_spinner4"
+        android:id="@+id/dynamic_spinner3"
         android:layout_width="296dp"
         android:layout_height="52dp"
         android:background="#FAE9FD"
@@ -84,7 +84,7 @@
         android:layout_width="230dp"
         android:layout_height="48dp"
         android:fontFamily="@font/fredoka_one"
-        android:text="Select City"
+        android:text="City"
         android:textAlignment="textStart"
         android:textColor="#62216E"
         android:textSize="34sp"

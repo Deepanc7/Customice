@@ -81,7 +81,7 @@
         app:layout_constraintVertical_bias="0.141" />
 
     <Spinner
-        android:id="@+id/dynamic_spinner3"
+        android:id="@+id/dynamic_spinner4"
         android:layout_width="296dp"
         android:layout_height="52dp"
         android:background="#FAE9FD"
@@ -94,7 +94,7 @@
         app:layout_constraintVertical_bias="0.215" />
 
     <Spinner
-        android:id="@+id/dynamic_spinner4"
+        android:id="@+id/dynamic_spinner3"
         android:layout_width="296dp"
         android:layout_height="52dp"
         android:background="#FAE9FD"

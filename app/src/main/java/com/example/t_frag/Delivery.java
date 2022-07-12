@@ -33,7 +33,7 @@ public class Delivery extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
 
-        dynamicSpinner3 = (Spinner) findViewById(R.id.dynamic_spinner3);
+        dynamicSpinner3 = (Spinner) findViewById(R.id.dynamic_spinner4);
 
 
 
@@ -73,7 +73,7 @@ public class Delivery extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
         });
-        dynamicSpinner4 = (Spinner) findViewById(R.id.dynamic_spinner4);
+        dynamicSpinner4 = (Spinner) findViewById(R.id.dynamic_spinner3);
 
         adapterBangalore = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, itemsBangalore);
