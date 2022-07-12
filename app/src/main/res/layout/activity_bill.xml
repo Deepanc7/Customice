@@ -47,8 +47,8 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="198dp"
-        android:layout_height="37dp"
+        android:layout_width="275dp"
+        android:layout_height="32dp"
         android:fontFamily="@font/fredoka_one"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -61,8 +61,8 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="158dp"
-        android:layout_height="38dp"
+        android:layout_width="269dp"
+        android:layout_height="37dp"
         android:fontFamily="@font/fredoka_one"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -75,7 +75,7 @@
 
     <TextView
         android:id="@+id/textView52"
-        android:layout_width="158dp"
+        android:layout_width="305dp"
         android:layout_height="38dp"
         android:fontFamily="@font/fredoka_one"
         android:textAlignment="center"
