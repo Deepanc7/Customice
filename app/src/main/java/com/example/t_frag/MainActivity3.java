@@ -2,6 +2,9 @@ package com.example.t_frag;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.VIBRATE;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -68,7 +71,13 @@ public class MainActivity3 extends AppCompatActivity {
                 scannedTV.setText(data);
 
                 Bundle bundle=new Bundle();
-                bundle.putString("data",data);
+                List<String>list = Arrays.asList(data.split("/"));
+                //String[] strArray = data.split("/");
+                if (list.size() == 1) {
+                    list.add("Shanti Niketan");
+                }
+                bundle.putString("data",list.get(0));
+                bundle.putString("data1",list.get(1));
                 Intent it=new Intent(getApplicationContext(),BillActivity.class);
                 it.putExtra("topping",bundle);
                 startActivity(it);
