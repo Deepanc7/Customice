@@ -27,7 +27,7 @@ public class Store extends AppCompatActivity {
 
         dynamicSpinner1 = (Spinner) findViewById(R.id.dynamic_spinner1);
 
-        String[] items = new String[]{"1", "2", "3"};
+        String[] items = new String[]{"1", "2", "3", "4", "5"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, items);
