@@ -14,13 +14,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
 
-public class fragment2 extends Fragment {
+public class flavorFrag extends Fragment {
     int total =0, flavorPrice =50, basePrice =60;
     //String result = "2";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View fragview = inflater.inflate(R.layout.fragment_fragment2, container, false);
+        View fragview = inflater.inflate(R.layout.fragment_flavorfrag, container, false);
         return fragview;
     }
 

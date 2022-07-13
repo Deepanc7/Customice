@@ -39,16 +39,16 @@
             android:name=".BillActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".Scanner"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".Intro"
             android:exported="false" />
         <activity
-            android:name=".Frag"
+            android:name=".CustomizeFragments"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Start"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

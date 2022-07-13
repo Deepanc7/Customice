@@ -2,7 +2,7 @@ package com.example.t_frag;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.VIBRATE;
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Arrays;
 
@@ -21,7 +21,7 @@ import androidx.core.content.ContextCompat;
 import eu.livotov.labs.android.camview.ScannerLiveView;
 import eu.livotov.labs.android.camview.scanner.decoder.zxing.ZXDecoder;
 
-public class MainActivity3 extends AppCompatActivity {
+public class Scanner extends AppCompatActivity {
     private ScannerLiveView camera;
     private TextView scannedTV;
     Button btn;
@@ -29,7 +29,7 @@ public class MainActivity3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_scanner);
 
         btn=findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener(){
@@ -52,17 +52,17 @@ public class MainActivity3 extends AppCompatActivity {
         camera.setScannerViewEventListener(new ScannerLiveView.ScannerViewEventListener() {
             @Override
             public void onScannerStarted(ScannerLiveView scanner) {
-                Toast.makeText(MainActivity3.this, "Scanner Started", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Scanner.this, "Scanner Started", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onScannerStopped(ScannerLiveView scanner) {
-                Toast.makeText(MainActivity3.this, "Scanner Stopped", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Scanner.this, "Scanner Stopped", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onScannerError(Throwable err) {
-                Toast.makeText(MainActivity3.this, "Scanner Error: " + err.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Scanner.this, "Scanner Error: " + err.getMessage(), Toast.LENGTH_SHORT).show();
             }
 
 

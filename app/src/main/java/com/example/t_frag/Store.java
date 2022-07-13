@@ -85,7 +85,7 @@ public class Store extends AppCompatActivity {
                     Intent intent = new Intent(Store.this, Delivery.class);
                     startActivity(intent);
                 } else {
-                    Intent intent = new Intent(Store.this, MainActivity3.class);
+                    Intent intent = new Intent(Store.this, Scanner.class);
                     startActivity(intent);
                 }
             }

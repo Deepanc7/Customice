@@ -12,12 +12,12 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-public class Frag extends AppCompatActivity {
+public class CustomizeFragments extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frag);
+        setContentView(R.layout.activity_customizefragments);
 
         TabLayout tabLayout = findViewById(R.id._tab);
         //SharedPreferences pref = getSharedPreferences("base", MODE_PRIVATE);
@@ -27,7 +27,7 @@ public class Frag extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Frag 2"), 1);
         tabLayout.addTab(tabLayout.newTab().setText("Frag 3"), 2);
 
-        FragmentStateAdapter pagerAdapter = new ScreenSlidePagerAdapter(Frag.this);
+        FragmentStateAdapter pagerAdapter = new ScreenSlidePagerAdapter(CustomizeFragments.this);
         viewPager.setAdapter(pagerAdapter);
 
         new TabLayoutMediator(tabLayout, viewPager, new TabLayoutMediator.TabConfigurationStrategy() {
@@ -64,9 +64,9 @@ public class Frag extends AppCompatActivity {
         @Override
         public Fragment createFragment(int position) {
             Fragment frag_new = null;
-            if (position==0) frag_new= new fragment1();
-            if (position==1) frag_new= new fragment2();
-            if (position==2) frag_new= new fragment3();
+            if (position==0) frag_new= new baseFrag();
+            if (position==1) frag_new= new flavorFrag();
+            if (position==2) frag_new= new toppingsFrag();
 
             return frag_new;
         }

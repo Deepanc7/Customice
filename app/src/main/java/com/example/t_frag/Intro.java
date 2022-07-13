@@ -8,20 +8,20 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity2 extends AppCompatActivity {
+public class Intro extends AppCompatActivity {
     ImageView imageView;
     Button next_btn;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_intro);
 
         next_btn = (Button) findViewById(R.id.next_button);
 
         next_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(getApplicationContext(),Frag.class);
+                Intent intent = new Intent(getApplicationContext(), CustomizeFragments.class);
                 startActivity(intent);
             }
         });

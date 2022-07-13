@@ -17,7 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
 
-public class fragment3 extends Fragment {
+public class toppingsFrag extends Fragment {
 
     Button next_btn;
     int flavorPrice =50, toppingPrice =0, basePrice = 60;
@@ -31,7 +31,7 @@ public class fragment3 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View frag = inflater.inflate(R.layout.fragment3, container, false);
+        View frag = inflater.inflate(R.layout.fragment_toppingsfrag, container, false);
         return frag;
     }
 
