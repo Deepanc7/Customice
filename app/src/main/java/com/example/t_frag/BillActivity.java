@@ -11,7 +11,6 @@ import java.util.Date;
 import java.io.FileOutputStream;
 import java.util.Objects;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -19,21 +18,18 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.Environment;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class BillActivity extends AppCompatActivity {
 
-    String a,b,name,t,add;
+    String cityDisplay, storeDisplay, addressDisplay;
     Button button;
-    TextView rcv,rcv1,address,icecream,price,qty;
+    TextView cityView, storeView,address,icecream,price, quantityDisplay;
     private static final int PERMISSION_REQUEST_CODE = 200;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,27 +44,27 @@ public class BillActivity extends AppCompatActivity {
             }
         });
         Bundle bundle=getIntent().getBundleExtra("topping");
-        a=bundle.getString("data");
-        b=bundle.getString("data1");
-        add=bundle.getString("data2");
-        rcv = (TextView) findViewById(R.id.textView8);
-        rcv1 = (TextView) findViewById(R.id.textView2);
+        cityDisplay =bundle.getString("city");
+        storeDisplay =bundle.getString("store");
+        addressDisplay =bundle.getString("address");
+        cityView = (TextView) findViewById(R.id.textView8);
+        storeView = (TextView) findViewById(R.id.textView2);
         address = (TextView) findViewById(R.id.textView52);
-        address.setText(add);
-        rcv.setText(a);
-        rcv1.setText(b);
+        address.setText(addressDisplay);
+        cityView.setText(cityDisplay);
+        storeView.setText(storeDisplay);
         SharedPreferences sharedPref = getSharedPreferences("preferences",0);
         String s1 = sharedPref.getString("icecream","");
-        int a = sharedPref.getInt("total", 0);
-        int c = sharedPref.getInt("quantity", 0);
+        int totalAmount = sharedPref.getInt("total", 0);
+        int quantity = sharedPref.getInt("quantity", 0);
 
-        float t1=c*a;
-        qty = (TextView) findViewById(R.id.textView36);
-        qty.setText(String.valueOf(c));
+        float billAmount=quantity*totalAmount;
+        quantityDisplay = (TextView) findViewById(R.id.textView36);
+        quantityDisplay.setText(String.valueOf(quantity));
         icecream = (TextView) findViewById(R.id.textView34);
         price = (TextView) findViewById(R.id.textView35);
         icecream.setText(s1);
-        price.setText(String.valueOf(t1));
+        price.setText(String.valueOf(billAmount));
 
 
     }
@@ -101,17 +97,14 @@ public class BillActivity extends AppCompatActivity {
 
     //Share ScreenShot
     private void shareScreenShot(File imageFile) {
-        //Uri uri = FileProvider.getUriForFile(
-                //this,
-                //BuildConfig.APPLICATION_ID + "." + getLocalClassName() + ".provider",
-                //imageFile);
+
         Uri uri = FileProvider.getUriForFile(Objects.requireNonNull(getApplicationContext()),
                 BuildConfig.APPLICATION_ID + ".provider", imageFile);
 
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_SEND);
         intent.setType("image/*");
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Download Application from Instagram");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, "Your Customice Bill");
         intent.putExtra(Intent.EXTRA_STREAM, uri);
 
         try {

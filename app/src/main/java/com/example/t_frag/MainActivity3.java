@@ -76,8 +76,8 @@ public class MainActivity3 extends AppCompatActivity {
                 if (list.size() == 1) {
                     list.add("Shanti Niketan");
                 }
-                bundle.putString("data",list.get(0));
-                bundle.putString("data1",list.get(1));
+                bundle.putString("city",list.get(0));
+                bundle.putString("store",list.get(1));
                 Intent it=new Intent(getApplicationContext(),BillActivity.class);
                 it.putExtra("topping",bundle);
                 startActivity(it);

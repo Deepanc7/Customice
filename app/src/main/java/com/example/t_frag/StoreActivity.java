@@ -105,8 +105,8 @@ public class StoreActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Bundle bundle=new Bundle();
-                bundle.putString("data", citySelector);
-                bundle.putString("data1", storeSelector);
+                bundle.putString("city", citySelector);
+                bundle.putString("store", storeSelector);
                 Intent it=new Intent(getApplicationContext(),BillActivity.class);
                 it.putExtra("topping",bundle);
                 startActivity(it);

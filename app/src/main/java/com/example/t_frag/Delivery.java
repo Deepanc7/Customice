@@ -109,9 +109,9 @@ public class Delivery extends AppCompatActivity {
             public void onClick(View v) {
                 String address=e.getText().toString();
                 Bundle bundle=new Bundle();
-                bundle.putString("data", citySelector);
-                bundle.putString("data1", storeSelector);
-                bundle.putString("data2",address);
+                bundle.putString("city", citySelector);
+                bundle.putString("store", storeSelector);
+                bundle.putString("address",address);
                 Intent it=new Intent(getBaseContext(),BillActivity.class);
                 it.putExtra("topping",bundle);
                 startActivity(it);
